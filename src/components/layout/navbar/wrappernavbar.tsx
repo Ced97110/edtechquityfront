@@ -1,0 +1,139 @@
+'use client'
+
+import useScrollDirection from '@components/hooks/useScrollDirection';
+import clsx from 'clsx';
+import React, { useEffect, useState } from 'react'
+import './style.css'
+import { usePathname, useRouter } from 'next/navigation';
+import LanguageChanger from '@components/utils/LanguageChanger';
+import Link from 'next/link';
+import MobileMenu from './mobile-menu';
+import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
+
+
+    
+ function WrapperNavbar(){ 
+
+
+
+   const [scrollToTop, setScrollToTop] = useState(true);
+   const scrollDirection = useScrollDirection('down');
+
+   const router = useRouter();
+  const pathname = usePathname()
+
+  const isNotLandingPage = pathname !== '/'
+
+   const { t, i18n } = useTranslation();
+
+   const slugify = text => text.toLowerCase().replace(/\s+/g, '-');
+   const urlSlug = slugify(t('about-us-url'));
+
+   const navLinks = [
+    {
+      name: t('summit-2024'),
+      url: `/summit-2024`,
+    },
+    {
+      name: t('about-us'),
+      url: '/about-us'
+    },
+    {
+      name: t('sponsorship'),
+      url: '/sponsorship',
+      sprite:'button'
+    },
+    
+  ]
+
+
+
+    
+    const headerClasses = clsx(
+    'fixed top-0 z-40 p-0 flex items-center text-white p-4 w-full h-[90px] transition-transform duration-500 ease-in-out bg-opacity-90 pointer-events-auto user-select-auto',
+    {
+        'bg-transparent text-white': scrollToTop && (pathname === '/es/summit-2024' || pathname === '/es' || pathname === '/summit-2024' ),
+        'bg-ciel text-white': scrollToTop && pathname !== '/',
+        'bg-fuch text-white' : !scrollToTop && pathname === '/es/summit-2024' || pathname === '/summit-2024',
+        'bg-ciel': !scrollToTop,
+        '-translate-y-[90px]': !scrollToTop && scrollDirection === 'down'
+    }
+);
+
+
+
+    const handleScroll = () => {
+      setScrollToTop(window.scrollY < 50);
+  };
+
+    useEffect(() => {
+   
+       window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+  return (
+
+        <nav className={headerClasses}>
+             <div className='relative w-full z-30 flex items-center justify-evenly'>
+
+              <div className='flex w-full items-center justify-between'>
+
+                <div className='flex w-full md:w-[40px]'>
+                  <Link href='/' className="mr-2 flex w-full font-extrabold text-inherit items-center text-2xl font-display justify-start md:w-auto lg:mr-6">
+                    <Image src='/logo.png' priority={true} className='aspect-square' width={53} height={53} alt='logo' />
+                      EdTechQuity
+                    </Link>
+                </div>
+
+                <div className='block flex-none md:hidden'>
+                  <MobileMenu  />
+                </div>
+                 
+               
+                <div className='sm:flex items-center hidden'>
+
+                    <ol className='p-0 m-0 list-none flex justify-between items-center'>
+                      {navLinks && navLinks.map(({ url, name, sprite }, i) => (
+                        <li
+                          key={i}
+                          className={`m-0 mr-2 relative underline-offset-4 text-inherit hover:underline ${
+                            i !== navLinks.length - 1 ? 'border-0 pr-2 border-inherit' : ''
+                          }`}
+                          style={{ transitionDelay: `${i * 100}ms` }}
+                        >
+                          {sprite === 'button' ? (
+                            // Render a button or any other specific component for the "Sponsorship" link
+                            <Link href={url}>
+                              <button className='border-jaune border-2 border-solid rounded-full px-4 py-2 text-white'>{name}</button>
+                            </Link>
+                          ) : (
+                            // Render a regular link for other links
+                            <Link href={url} passHref>
+                              <p className='p-2'>{name}</p>
+                            </Link>
+                          )}
+                        </li>
+                      ))}
+                    </ol>
+
+                </div>
+
+                <div className='items-center w-1/2'>
+                   <LanguageChanger/>
+                </div>
+                
+               
+              </div>
+          </div>
+        </nav>
+
+  )
+}
+
+export default WrapperNavbar;
