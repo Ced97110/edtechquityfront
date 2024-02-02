@@ -6,7 +6,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import Link from 'next/link';
 import clsx from 'clsx';
 import LanguageChanger from '@components/utils/LanguageChanger';
-
+import Image from 'next/image';
 
 
 interface MobileMenuProps {
@@ -91,42 +91,53 @@ function MobileMenu ({active = ''}: MobileMenuProps) {
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-[100%]"
             >
-             <Dialog.Panel className="fixed bottom-0 left-0 right-0 top-0 flex h-full w-full flex-col bg-white pb-6">
-               <div className='p-4'>
-                 <button
-                   className='mb-4 flex h-11 w-11 items-center justify-center rounded-md border border-ciel text-ciel  transition-colors'
+             <Dialog.Panel className="fixed bottom-0 left-0 right-0 top-0 h-full w-full flex bg-ciel pb-6">
+               <div className='p-4 w-full'>
+                <div className='flex justify-between'>
+                   <div className='flex w-full md:w-[40px]'>
+                    <Link href='/' className="mr-2 flex w-full font-extrabold text-white items-center text-2xl font-display justify-start md:w-auto lg:mr-6">
+                      <Image src='/logo.png' priority={true} className='aspect-square' width={53} height={53} alt='logo' />
+                        EdTechQuity
+                      </Link>
+                    </div>
+                   <button
+                   className='mb-4 flex h-11 w-11 items-center justify-center rounded-md border border-white text-white  transition-colors'
                    onClick={closeMobileMenu}
                    aria-label="Close mobile menu"
 
                  >
                    <XMarkIcon className='h-6'/>
                  </button>
+                </div>
+                
+                 <div className='flex flex-col justify-center items-center mt-12'>
                    {navLinks.length ? (
-                    <ul className="flex w-full flex-col  divide-y-2">
+                    <ul className="flex w-full flex-col  divide-y-2 text-white">
                       {navLinks.map((item, i) => (
                         <li
-                          className="py-2 text-lg text-black transition-colors dark:text-white"
+                          className="py-2 text-lg text-white transition-colors dark:text-white"
                           key={i}
                         >
                            {item.sprite === 'button' ? (
                       // Render a button or any other specific component for the "Sponsorship" link
                            <Link href={item.url}  onClick={closeMobileMenu}>
-                              <button className='rounded-full px-4 py-2 font-display  bg-ciel text-white hover:text-pink-white'>{item.name}</button>
+                              <button className='rounded-full px-4 py-2 font-display border-jaune border-2 bg-transparent text-white hover:text-pink-white'>{item.name}</button>
                             </Link>
                           ) : (
                             // Render a regular link for other links
                             <Link href={item.url} onClick={closeMobileMenu} passHref>
-                              <p className='p-2  hover:uderline focus:text-white text-ciel'> {item.name}</p>
+                              <p className='p-2  hover:uderline text-white'> {item.name}</p>
                             </Link>
                           )}
                         </li>
                       ))}
                     </ul>
                   ) : null}
+                    <div className='flex justify-center mt-8'>
+                     <LanguageChanger/>
+                    </div>
+                  </div>
                </div>
-               <div>
-                  <LanguageChanger/>
-                </div>
              </Dialog.Panel>   
 
           </Transition.Child>

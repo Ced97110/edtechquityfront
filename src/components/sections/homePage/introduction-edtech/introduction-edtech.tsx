@@ -36,8 +36,7 @@ import LanguageChanger from '@components/utils/LanguageChanger';
        
       <section className='px-5 bg-white pt-[50px]'>
 
-        <LanguageChanger/>
-
+      
         <div className='container mx-auto'>
 
             <div className='grid grid-cols-2 gap-x-10 '>

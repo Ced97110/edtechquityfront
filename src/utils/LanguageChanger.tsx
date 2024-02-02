@@ -38,9 +38,14 @@ export default function LanguageChanger() {
   };
 
   return (
-    <select onChange={handleChange} value={currentLocale}>
-      <option value="en">English</option>
-      <option value="es">Espanol</option>
-    </select>
+    <select
+          className="appearance-none bg-transparent border-2 border-jaune rounded-lg  py-2 px-4 text-white leading-tight focus:outline-none focus:bg-white focus:border-jaune hover:border-jaune transition-colors duration-200 ease-in-out cursor-pointer"
+           onChange={handleChange}
+          value={currentLocale}
+        >
+        <option className="text-sm text-white" value="en">English</option>
+        <option className="text-sm text-white" value="es">Español</option>
+     </select>
+
   );
 }

@@ -124,7 +124,7 @@ import Image from 'next/image';
 
                 </div>
 
-                <div className='items-center w-1/2'>
+                <div className='hidden items-center md:flex'>
                    <LanguageChanger/>
                 </div>
                 
