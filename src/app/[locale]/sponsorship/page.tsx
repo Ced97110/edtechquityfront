@@ -1,10 +1,9 @@
-'use client'
-
 
 import React from 'react';
 import TranslationsProvider from '@components/utils/translationProvider';
 import initTranslations from '@components/app/i18n';
 import { Packages } from './packages';
+import type { Metadata } from 'next'
 
 
 interface packages {
@@ -22,26 +21,24 @@ interface SectionProps {
 }
 
 
-
-
 const i18nNamespaces = ['sponsorship'];
+
+export const metadata: Metadata = {
+  title: 'Sponsorship | Edtechquity',
+  description: 'Support the empowerment of young Latina women in the Sacramento Valley by sponsoring the Young Lady Latina Empowerment Summit on May 4, 2024. This event promises a transformative experience with education, networking, and mentorship for young women aged 16-23. Your sponsorship will fund micro scholarships, aiding their educational and career aspirations. Join us in shaping a brighter future and elevating your brand with meaningful community engagement.'
+}
+
 
 
 const SponsorshipPage = async ({ params: { locale } }) => {
 
-  const { t, resources } = await initTranslations(locale, i18nNamespaces);
-
+  
   return (
 
-     <TranslationsProvider
-      namespaces={i18nNamespaces}
-      locale={locale}
-      resources={resources}>
         <main className='min-h-screen  w-full max-w-[2000px]'>
-        <Packages/>
+           <Packages locale={locale}/>
         </main>
-    </TranslationsProvider>
-
+    
   )
 };
 

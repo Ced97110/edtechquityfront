@@ -10,7 +10,7 @@ import FooterMenu from './footer-menu';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 
-const { ORGANISATION_NAME, SITE_NAME } = process.env;
+const { COMPANY_NAME,  SITE_NAME } = process.env;
 
 interface footerProps {
   active?:string;
@@ -28,7 +28,7 @@ export default async function Footer({active}:footerProps) {
 
   const skeleton = 'w-full h-6 animate-pulse rounded bg-neutral-200 dark:bg-neutral-700';
 
-  const copyrightName = ORGANISATION_NAME || SITE_NAME || '';
+  const copyrightName =  COMPANY_NAME ||  SITE_NAME || '';
 
   return (
     <div className={clsx({

@@ -1,13 +1,13 @@
+import initTranslations from '@components/app/i18n';
 import ResponsiveImage from '@components/components/sections/homePage/hero/responsive-image'
 import { CheckIcon } from '@heroicons/react/24/solid';
 import React from 'react'
-import { useTranslation } from 'react-i18next';
 
 
 
-export const Packages = () => {
+export  const Packages = async ({locale}) => {
 
-  const { t } = useTranslation();
+   const { t,i18n } = await initTranslations(locale, ['sponsorship']);
    
 const packages = [
   {
@@ -69,7 +69,7 @@ const packages = [
                 <div className='col-span-3 pb-6 h-full row-span-2 p-6 rounded-lg'>
                     <div className='flex flex-col items-center'>
                       <h2 className='text-4xl lg:text-4xl text-ciel font-extrabold font-display text-center'>{t('sponsor-title-intro')}</h2>
-                      <h2 className='text-[13px] text-center  font-normal font-display pt-4 pb-4'>{t('sponsor-subtitle-1')}</h2>
+                      <h2 className='text-md text-center text-neutral-400  font-normal font-display pt-4 pb-4'>{t('sponsor-subtitle-1')}</h2>
                 
                       <div className='lg:max-w-[700px]'>
                         <p className='md:text-lg pb-4 leading-6 font-display tracking-wide'> 

@@ -8,17 +8,17 @@ import Sponsor from '@components/components/sections/sacramento-page/sponsor';
 import initTranslations from '../i18n';
 import TranslationsProvider from '@components/utils/translationProvider';
 import { cookies } from 'next/headers';
+import { Metadata } from 'next';
 
 
 
 const i18nNamespaces = ['Home'];
 
-export const metadata = {
-  description: 'Welcome to Edtechquity',
-  openGraph: {
-    type: 'website'
-  }
-};
+export const metadata: Metadata = {
+  title:'EdTechQuity',
+  description: 'Discover how EdTechQuity supports Inspirame, a 501(c)(3) nonprofit, in its mission to empower low-income students to achieve higher education. Together, we aim to increase the graduation rates of Latinas from community college within 2 years, providing the tools and motivation to break the cycles of poverty.'
+}
+
 
 
 async function HomePage({ params: { locale } }) {

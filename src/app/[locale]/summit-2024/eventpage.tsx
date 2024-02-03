@@ -15,8 +15,7 @@ export const EventFeature = () => {
 
 
   const [activeTabId, setActiveTabId] = useState(0);
-  const [tabFocus, setTabFocus] = useState(null);
-  const [isActive, setIsActive] = useState(activeTabId)
+  
 
    const { t } = useTranslation();
 
@@ -59,9 +58,11 @@ const eventFeatures = [
        src:'https://res.cloudinary.com/dqr6k0yey/image/upload/f_auto,q_auto/v1/sacramento-2024/supportive-parent',
        paragraphs: [t('event-feat-6-para')]
 }
-   
+
 ];
 
+
+            
   return (
 
     <>
@@ -101,16 +102,17 @@ const eventFeatures = [
 
           <section className='bg-fuch  py-[50px]'>
               <div className='container mx-auto'>
+                
 
                 <div className='grid grid-cols-3 justify-items-center'>
                     <div className='col-span-3 pb-6 h-full bg-fuch row-span-2 p-6 rounded-lg'>
                         <div className='flex flex-col items-center'>
                           <h2 className='text-3xl lg:text-4xl text-white font-bold font-display text-center'>{t('summit-title-intro')}</h2>
-                          <h2 className='text-[13px] text-center text-white font-normal font-display pt-4 pb-4'>{t('summit-subtitle-intro')}</h2>
+                          <h2 className='text-md text-jaune text-center font-normal font-display pt-4 pb-4'>{t('summit-subtitle-intro')}</h2>
                     
                           <div className='max-w-[700px]'>
-                            <p className='text-white md:text-lg pb-4 leading-6 font-display tracking-wide'>{t('summit-intro-para-1')}</p>
-                            <p className='text-white md:text-lg pb-4 leading-6 font-display tracking-wide'>{t('summit-intro-para-2')}</p>
+                              <p className='text-white md:text-lg pb-4 leading-6 font-display tracking-wide'>{t('summit-intro-para-1')}</p>
+                               <p className='text-white md:text-lg pb-4 leading-6 font-display tracking-wide'>{t('summit-intro-para-2')}</p>
                           </div>
                         </div>
                     
@@ -211,7 +213,7 @@ const eventFeatures = [
                               <h3 className="text-white text-start text-2xl lg:text-4xl font-bold font-display relative">
                                {t('summit-eligibility-title')}
                               </h3>
-                              <p className='font-display text-md text-white pt-4'> {t('summit-eligibility-subtitle')}</p>
+                              <p className='font-display text-md text-jaune pt-4'> {t('summit-eligibility-subtitle')}</p>
                             </div>
                           </div>
                       </div>
