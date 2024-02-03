@@ -9,6 +9,10 @@ import React from 'react'
 
   const { t,i18n } = await initTranslations(locale, ['about-us']);
 
+  const emailMaria ='maria.medrano@inspirame.com'
+
+  const emailMagda ='magdalena.gonzalez@inspirame.com'
+
   return (
 
     <main className='min-h-screen  w-full max-w-[2000px] bg-white'>
@@ -16,7 +20,7 @@ import React from 'react'
         <div className='mx-auto'>
            <video
               key={i18n.language}
-              src={i18n.language === 'es' ? 'Education-es.mp4' :'Education.mp4'}
+              src={i18n.language === 'en' ? 'Education.mp4' :'/Education-es.mp4'}
               autoPlay={true}
               loop
               muted
@@ -27,10 +31,10 @@ import React from 'react'
               />
           </div>
       </section>
-       <section className=' bg-white bg-opacity-90 py-[50px]'>
+       <section className=' bg-white bg-opacity-90 pt-[5px] pb-[50px]'>
         <div className='p-8 mx-auto container' >
           <div className='flex-col flex items-center gap-3'>
-            <h2 className='text-5xl lg:text-6xl text-ciel font-extrabold font-display text-center pb-4'>{t('about-team')}</h2>
+            <h2 className='text-5xl lg:text-6xl text-ciel font-extrabold font-display text-center pb-6'>{t('about-title')}</h2>
             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'> 
              {t('about-para-1')}
             </p>
@@ -59,8 +63,12 @@ import React from 'react'
                  <p className='text-center py-6 font-bold'>Maria Medrano</p>
                  <p className='text-center pb-4'>{t('about-maria')}</p>
                  <div className='flex justify-evenly'>
-                    <IconLinkedin />
-                    <EnvelopeIcon className="h-5 w-5 text-ciel mb-2" />
+                    <a href="https://www.linkedin.com/in/mariamedrano/" target="_blank" rel="noopener noreferrer">
+                     <IconLinkedin />
+                    </a>
+                    <a className="email-link" href={`mailto:${emailMaria}`}>
+                       <EnvelopeIcon className="h-5 w-5 text-ciel mb-2"/>
+                     </a>
                  </div>
                </div>
               </div>
@@ -74,8 +82,13 @@ import React from 'react'
                  <p className='text-center py-6 font-bold'>Magdalena Gonzalez</p>
                  <p className='text-center pb-4'>{t('about-magda')}</p>
                  <div className='flex justify-evenly'>
-                    <IconLinkedin />
-                    <EnvelopeIcon className="h-5 w-5 text-ciel mb-2"/>
+                    <a href="https://www.linkedin.com/in/magdalenagon/" target="_blank" rel="noopener noreferrer">
+                     <IconLinkedin />
+                    </a>
+
+                     <a className="email-link" href={`mailto:${emailMagda}`}>
+                       <EnvelopeIcon className="h-5 w-5 text-ciel mb-2"/>
+                     </a>
                  </div>
                </div>
               </div>

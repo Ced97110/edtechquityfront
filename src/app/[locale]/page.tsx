@@ -13,6 +13,13 @@ import { cookies } from 'next/headers';
 
 const i18nNamespaces = ['Home'];
 
+export const metadata = {
+  description: 'Welcome to Edtechquity',
+  openGraph: {
+    type: 'website'
+  }
+};
+
 
 async function HomePage({ params: { locale } }) {
 

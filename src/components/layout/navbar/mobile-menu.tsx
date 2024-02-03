@@ -7,6 +7,7 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import LanguageChanger from '@components/utils/LanguageChanger';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 
 interface MobileMenuProps {
@@ -15,24 +16,28 @@ interface MobileMenuProps {
 
 function MobileMenu ({active = ''}: MobileMenuProps) {
 
+  const { t, i18n } = useTranslation();
+
    const navLinks = [
     {
-      name: 'Summit 2024',
-      url: '/summit-2024',
+      name: t('home'),
+      url:'/',
     },
     {
-      name: 'About us',
-      url: '/about-us',
+      name: t('summit-2024'),
+      url: `/summit-2024`,
     },
     {
-      name: 'Sponsorship',
+      name: t('about-us'),
+      url: '/about-us'
+    },
+    {
+      name: t('sponsorship'),
       url: '/sponsorship',
       sprite:'button'
     },
     
   ]
-
-
 
     const [isOpen, setIsOpen] = useState(false);
     const openMobileMenu = () => setIsOpen(true);
@@ -93,7 +98,7 @@ function MobileMenu ({active = ''}: MobileMenuProps) {
             >
              <Dialog.Panel className="fixed bottom-0 left-0 right-0 top-0 h-full w-full flex bg-ciel pb-6">
                <div className='p-4 w-full'>
-                <div className='flex justify-between'>
+                <div className='flex justify-between items-center'>
                    <div className='flex w-full md:w-[40px]'>
                     <Link href='/' className="mr-2 flex w-full font-extrabold text-white items-center text-2xl font-display justify-start md:w-auto lg:mr-6">
                       <Image src='/logo.png' priority={true} className='aspect-square' width={53} height={53} alt='logo' />
@@ -101,7 +106,7 @@ function MobileMenu ({active = ''}: MobileMenuProps) {
                       </Link>
                     </div>
                    <button
-                   className='mb-4 flex h-11 w-11 items-center justify-center rounded-md border border-white text-white  transition-colors'
+                   className='flex h-11 w-11 items-center justify-center rounded-md border border-white text-white  transition-colors'
                    onClick={closeMobileMenu}
                    aria-label="Close mobile menu"
 

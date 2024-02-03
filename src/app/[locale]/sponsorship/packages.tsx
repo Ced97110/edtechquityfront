@@ -53,9 +53,6 @@ const packages = [
               <div className="z-10 flex flex-col relative top-[65px]">
                   <h1 className="text-4xl lg:text-5xl text-white font-extrabold font-display text-center">{t('sponsor-title')}</h1>
                   <p className="md:text-xl mb-6 font-bold text-white text-start">{t('sponsor-subtitle')}</p>
-                  <div className="font-display text-white flex items-center">
-                    <div className="border-r border-white h-5"></div>
-                  </div>
               </div>
           </div>
        
@@ -71,8 +68,8 @@ const packages = [
             <div className='grid grid-cols-3 justify-items-center'>
                 <div className='col-span-3 pb-6 h-full row-span-2 p-6 rounded-lg'>
                     <div className='flex flex-col items-center'>
-                      <h2 className='text-4xl lg:text-5xl text-ciel font-extrabold font-display text-center'>{t('sponsor-title-intro')}</h2>
-                      <h2 className='text-[13px] text-center  font-normal font-display pt-4 pb-4'>test tes test test new tagline ?</h2>
+                      <h2 className='text-4xl lg:text-4xl text-ciel font-extrabold font-display text-center'>{t('sponsor-title-intro')}</h2>
+                      <h2 className='text-[13px] text-center  font-normal font-display pt-4 pb-4'>{t('sponsor-subtitle-1')}</h2>
                 
                       <div className='lg:max-w-[700px]'>
                         <p className='md:text-lg pb-4 leading-6 font-display tracking-wide'> 
@@ -98,7 +95,7 @@ const packages = [
                   <div className='w-full border-t border-inherit border-solid border-blue-900 pt-3'>
                     <div className='flex'>
                       <div className='h-full p-4'>
-                        <h3 className="text-4xl lg:text-5xl text-ciel font-extrabold font-display text-center">
+                        <h3 className="text-4xl lg:text-4xl text-ciel font-extrabold font-display">
                            {t('sponsor-pack-title')}
                         </h3>
                         <p className='text-md text-neutral-400  font-medium font-display pt-4'> {t('sponsor-pack-subtitle')}</p>

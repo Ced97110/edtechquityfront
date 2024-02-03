@@ -1,6 +1,6 @@
 'use client'
 
-import WrapperTypeForm from '@components/components/wrapperTypeform/wrapperTypeform'
+
 import React, { useState } from 'react'
 import CounterSection from '../jsummit-2024/countersection'
 import ResponsiveImage from '@components/components/sections/homePage/hero/responsive-image';

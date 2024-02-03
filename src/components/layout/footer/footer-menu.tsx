@@ -12,6 +12,10 @@ export default function FooterMenu() {
 
    const navLinks = [
     {
+      name: t('home'),
+      url:'/',
+    },
+    {
       name: t('summit-2024'),
       url: '/summit-2024',
     },

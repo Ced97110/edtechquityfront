@@ -8,10 +8,9 @@ import { Suspense } from 'react';
 import Image from 'next/image';
 import FooterMenu from './footer-menu';
 import clsx from 'clsx';
-import { useRouter } from 'next/router';
 import { usePathname } from 'next/navigation';
 
-const { COMPANY_NAME, SITE_NAME } = process.env;
+const { ORGANISATION_NAME, SITE_NAME } = process.env;
 
 interface footerProps {
   active?:string;
@@ -29,7 +28,7 @@ export default async function Footer({active}:footerProps) {
 
   const skeleton = 'w-full h-6 animate-pulse rounded bg-neutral-200 dark:bg-neutral-700';
 
-  const copyrightName = COMPANY_NAME || SITE_NAME || '';
+  const copyrightName = ORGANISATION_NAME || SITE_NAME || '';
 
   return (
     <div className={clsx({
@@ -69,7 +68,7 @@ export default async function Footer({active}:footerProps) {
           <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
           <p>EdTechQuity</p>
           <p className="md:ml-auto">
-            <a href="https://vercel.com" className="text-black dark:text-white"></a>
+            <a href="https://edtechquity.net" className="text-black dark:text-white"></a>
           </p>
         </div>
       </div>

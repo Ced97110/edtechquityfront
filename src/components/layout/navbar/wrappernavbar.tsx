@@ -32,6 +32,10 @@ import Image from 'next/image';
 
    const navLinks = [
     {
+      name: t('home'),
+      url:'/',
+    },
+    {
       name: t('summit-2024'),
       url: `/summit-2024`,
     },
@@ -53,7 +57,7 @@ import Image from 'next/image';
     const headerClasses = clsx(
     'fixed top-0 z-40 p-0 flex items-center text-white p-4 w-full h-[90px] transition-transform duration-500 ease-in-out bg-opacity-90 pointer-events-auto user-select-auto',
     {
-        'bg-transparent text-white': scrollToTop && (pathname === '/es/summit-2024' || pathname === '/es' || pathname === '/summit-2024' ),
+        'bg-transparent text-white': scrollToTop && (pathname === '/es/summit-2024' || pathname === '/es' || pathname === '/summit-2024' || pathname === '/sponsorship' || pathname === '/es/sponsorship'   ),
         'bg-ciel text-white': scrollToTop && pathname !== '/',
         'bg-fuch text-white' : !scrollToTop && pathname === '/es/summit-2024' || pathname === '/summit-2024',
         'bg-ciel': !scrollToTop,
@@ -91,12 +95,12 @@ import Image from 'next/image';
                     </Link>
                 </div>
 
-                <div className='block flex-none md:hidden'>
+                <div className='block flex-none lg:hidden'>
                   <MobileMenu  />
                 </div>
                  
                
-                <div className='sm:flex items-center hidden'>
+                <div className='sm:hidden items-center hidden lg:flex'>
 
                     <ol className='p-0 m-0 list-none flex justify-between items-center'>
                       {navLinks && navLinks.map(({ url, name, sprite }, i) => (
@@ -124,7 +128,7 @@ import Image from 'next/image';
 
                 </div>
 
-                <div className='hidden items-center md:flex'>
+                <div className='hidden items-center md:hidden lg:flex'>
                    <LanguageChanger/>
                 </div>
                 

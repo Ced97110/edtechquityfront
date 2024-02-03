@@ -5,7 +5,6 @@ import Link from 'next/link';
 import cld from '@components/utils/cloudinary';
 import { PauseIcon, PlayIcon } from '@heroicons/react/24/solid';
 import { streamingProfile } from '@cloudinary/url-gen/actions/transcode';
-import '../../../../app/style.css'
 import { useTranslation } from 'react-i18next';
 
 
