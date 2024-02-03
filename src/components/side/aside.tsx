@@ -13,7 +13,7 @@ function SocialMediaAside ({active,children}: SocialProps){
   const asidePosition = clsx(
     'lg:block hidden w-20 fixed z-50 -right-4',
    {
-    'bottom-40':active === 'active',
+    'bottom-24':active === 'active',
     'bottom-11':active !== 'active',
    }
   );
