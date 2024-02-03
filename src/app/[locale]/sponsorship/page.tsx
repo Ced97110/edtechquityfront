@@ -1,7 +1,5 @@
 
 import React from 'react';
-import TranslationsProvider from '@components/utils/translationProvider';
-import initTranslations from '@components/app/i18n';
 import { Packages } from './packages';
 import type { Metadata } from 'next'
 

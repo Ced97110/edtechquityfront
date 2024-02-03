@@ -43,7 +43,7 @@ export const metadata: Metadata = {
        <section className=' bg-white bg-opacity-90 pt-[5px] pb-[50px]'>
         <div className='p-8 mx-auto container' >
           <div className='flex-col flex items-center gap-3'>
-            <h2 className='text-5xl lg:text-6xl text-ciel font-extrabold font-display text-center pb-6'>{t('about-title')}</h2>
+            <h2 className='text-5xl lg:text-5xl text-ciel font-extrabold font-display text-center pb-6'>{t('about-title')}</h2>
             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'> 
              {t('about-para-1')}
             </p>

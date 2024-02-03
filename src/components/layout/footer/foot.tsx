@@ -1,11 +1,10 @@
 'use client'
 
-import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { navLinks } from '../navbar/menu';
-import { useTranslation } from 'react-i18next';
+
+
 
 export const FooterMenuItem = ({ item }: { item:any }) => {
   const pathname = usePathname();

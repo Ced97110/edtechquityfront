@@ -98,18 +98,18 @@ const packages = [
                         <h3 className="text-4xl lg:text-4xl text-ciel font-extrabold font-display">
                            {t('sponsor-pack-title')}
                         </h3>
-                        <p className='text-md text-neutral-400  font-medium font-display pt-4'> {t('sponsor-pack-subtitle')}</p>
+                        <p className='text-md text-center text-neutral-400  font-normal font-display pt-4'> {t('sponsor-pack-subtitle')}</p>
                       </div>
                     </div>
                 </div>
               </div>
             </div>
 
-            <div className='grid grid-cols-2 gap-2 justify-items-center px-[200px]'>
+            <div className='grid grid-cols-2 gap-2 justify-items-center px-[215px]'>
 
               {packages && packages.map((item,index) =>  (
 
-                <div key={index} className={`col-span-2 lg:col-span-1 lg:row-span-1 rounded-lg`}>
+                <div key={index} className={`col-span-2 lg:col-span-1 lg:row-span-1 rounded-lg `}>
                   <div className={`p-5 w-[350px] h-[450px] lg:w-[500px] lg:h-[400px] rounded-lg ${item.bgColor}`}>
                    <div className='flex-col text-white items-center'>
                     <h4 className='text-3xl text-white font-bold text-center pb-4'>{item.name}</h4>
