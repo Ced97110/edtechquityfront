@@ -259,6 +259,8 @@ const eventFeatures = [
 
           </section>
 
+          
+
           <section className='bg-pink-600 max-h-screen py-[100px] lg:px-36'>
               <div className='mb-4 lg:mb-14'>
                 <h2 className='text-2xl lg:text-4xl text-center font-bold font-display text-white'>
