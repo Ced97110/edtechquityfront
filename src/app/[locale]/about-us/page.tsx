@@ -9,7 +9,7 @@ import type { Metadata } from 'next'
 
 
 export const metadata: Metadata = {
-  title: 'About | Edtechquity',
+  title: 'About-us',
   description: 'EdTechQuity was founded with a unique vision in mind, intertwining the concepts of Education, Technology, and Equity. As a 501(c)(3) nonprofit organization, our mission is to eradicate generational poverty through educational achievement. Dedicated to enhancing the completion rates of low-income students in trade certificate or college degree programs, with a special focus on Latina students, we aim to create equitable opportunities for those who need them most. Join a transformative summit dedicated to empowering young Latina women in the Sacramento Valley, aged 16-23. A collaboration between EdTechQuity and Inspirame, this event is a day of inspiration, learning, and networking, offering young Latinas and their supporters the opportunity to engage in growth and success.'
 };
 

@@ -10,7 +10,7 @@ const i18nNamespaces = ['summit-2024'];
 
 
 export const metadata: Metadata = {
-  title:'ETQ Summit-2024 | Edtechquity',
+  title:'ETQ Summit-2024',
   description: 'Join a transformative summit dedicated to empowering young Latina women in the Sacramento Valley, aged 16-23. A collaboration between EdTechQuity and Inspirame, this event is a day of inspiration, learning, and networking, offering young Latinas and their supporters the opportunity to engage in growth and success.'
 }
 
