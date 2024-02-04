@@ -64,7 +64,7 @@ const VideoHero = () => {
 
               <div className='absolute  flex flex-col justify-center p-4 b bottom-0 lg:left-24 lg:bottom-[10px] w-5/5  lg:w-4/5 transition-all md:mx-auto'>
             
-                <h2 className='font-display text-start md:text-6xl text-4xl font-extrabold text-white'>{t('Hero-title')}</h2>
+                <h2 className='font-display text-start md:text-6xl text-4xl font-extrabold text-white'>{t('Hero-title')}<span className='font-display text-start md:text-6xl text-4xl font-extrabold text-jaune'>{t('hero-title-2')}</span></h2>
                 <h3 className='font-display font-medium text-lg md:text-xl text-white mt-4'>{t('Hero-subtitle-1')}</h3>
                 <h3 className='font-display font-medium text-lg md:text-xl text-white mt-4'>{t('Hero-subtitle-2')}</h3>
                 <div className='flex justify-between w-full items-center mt-4'>
