@@ -29,6 +29,12 @@ const eventFeatures = [
         paragraphs: [t('event-feat-1-para')]
     },
     {
+        title: t('event-feat-5-title'),
+        subtitle:t('event-feat-5-subtitle'),
+        src:'https://res.cloudinary.com/dqr6k0yey/image/upload/f_auto,q_auto/v1/sacramento-2024/latina-diploma',
+        paragraphs:[t('event-feat-5-para')]
+    },
+    {
         title: t('event-feat-2-title'),
         subtitle:t('event-feat-2-subtitle'),
          src:'https://res.cloudinary.com/dqr6k0yey/image/upload/f_auto,q_auto/v1/sacramento-2024/networking-fingers',
@@ -45,12 +51,6 @@ const eventFeatures = [
         subtitle: t('event-feat-4-subtitle'),
         src:'https://res.cloudinary.com/dqr6k0yey/image/upload/f_auto,q_auto/v1/sacramento-2024/frida-carlo',
         paragraphs: [t('event-feat-4-para')]
-    },
-    {
-        title: t('event-feat-5-title'),
-        subtitle:t('event-feat-5-subtitle'),
-        src:'https://res.cloudinary.com/dqr6k0yey/image/upload/f_auto,q_auto/v1/sacramento-2024/latina-diploma',
-        paragraphs:[t('event-feat-5-para')]
     },
     {
        title: t('event-feat-6-title'),
