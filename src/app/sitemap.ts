@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   pages.forEach((page) => {
     locales.forEach((locale) => {
       sitemapEntries.push({
-        url: `https:edtechquity.net/${locale === 'en' ? '' : `/${locale}`}${page.path}`,
+        url: `https:edtechquity.net${locale === 'en' ? '' : `/${locale}`}${page.path}`,
         lastModified: new Date(),
         changeFrequency: page.changeFrequency,
         priority: page.priority,
