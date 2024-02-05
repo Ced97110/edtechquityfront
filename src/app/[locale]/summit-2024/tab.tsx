@@ -8,6 +8,20 @@ import clsx from 'clsx';
 const Tab = () => {
 
   const [activeTabId, setActiveTabId] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
 
   const { t } = useTranslation();
 
@@ -50,17 +64,22 @@ const Tab = () => {
     },
   ];
 
+   const transformStyle = isMobile
+    ? { transform: `translateX(${activeTabId * 160}px)` }
+    : { transform: `translateY(${activeTabId * 70}px)` };
+
+
   return (
     <>
-      <div className="grid grid-cols-3 max-w-[1000px] mx-auto gap-4">
+      <div className="grid md:grid-cols-3 max-w-[1000px] mx-auto gap-4">
         <div role="tablist" aria-label="mission tabs" className="col-span-2  relative  md:col-span-1 z-{3}  overflow-y-auto flex md:flex-col overflow-x-auto">
           {eventFeatures.map(({ title }, i) => (
             <button
               key={i}
               className={clsx(
-                "flex items-center md:text-lg justify-center min-w-[200px] w-full border-l-[2px] border-lightnavy lg:max-h-[200px] text-neutral-200 h-[70px] p-2 lg:justify-start hover:bg-pink-800 transition-all duration-600 ease-in-out text-center bg-opacity-90 backdrop-blur-md ",
+                "flex items-center md:text-lg justify-center border-b-[2px] min-w-[160px] w-full md:border-b-0  md:border-l-[2px] border-lightnavy lg:max-h-[200px] text-neutral-200 h-[70px] p-2 lg:justify-start hover:bg-pink-800 transition-all duration-600 ease-in-out text-center bg-opacity-90 backdrop-blur-md ",
                 {
-                  'bg-transparent focus:bg-pink-800': activeTabId === i,
+                  'bg-transparent focus:bg-pink-800 focus-visible:bg-pink-800': activeTabId === i,
                   ' border-jaune ': activeTabId === i,
         
                 }
@@ -81,8 +100,8 @@ const Tab = () => {
             </button>
           ))}
          <div 
-            className="absolute top-0 left-0 z-{20} w-[2px] h-[70px] rounded-lg bg-jaune transition-all duration-600 ease-in-out delay-75"
-            style={{ transform: `translateY(${activeTabId * 70}px)` }}
+            className="absolute w-[160px] h-[2px] bottom-0 md:top-0 left-0 z-{20} md:w-[2px] md:h-[70px] rounded-lg bg-jaune transition-all duration-600 ease-in-out delay-75"
+            style={transformStyle}
             />
 
         </div>
