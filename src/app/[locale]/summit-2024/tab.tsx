@@ -102,7 +102,7 @@ const Tab = () => {
               className={clsx(
                 "flex items-center md:text-lg justify-center border-b-[2px] min-w-[180px] w-full md:border-b-0  md:border-l-[2px] border-lightnavy lg:max-h-[200px] text-neutral-200 h-[70px] p-2 lg:justify-start hover:bg-pink-800 transition-all duration-600 ease-in-out text-center bg-opacity-90 backdrop-blur-md ",
                 {
-                  'bg-transparent focus:bg-pink-800 focus-visible:bg-pink-800': activeTabId === i,
+                  'bg-transparent focus:bg-pink-800': activeTabId === i,
                   ' border-jaune ': activeTabId === i,
         
                 }
