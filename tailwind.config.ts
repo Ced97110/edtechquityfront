@@ -32,7 +32,9 @@ const config: Config = {
         navy:'#111D4A',
         fuch:'#820263',
         ciel:'#2F7DD2',
-        jaune:'#F3CE28'
+        jaune:'#F3CE28',
+        lightnavy:'#112240',
+        slate:'#8892b0'
       }
       
     },
