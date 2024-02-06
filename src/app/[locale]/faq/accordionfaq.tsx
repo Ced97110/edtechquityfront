@@ -57,19 +57,19 @@ const Faq = () => {
           </div>
         </div>
         </div>
-        <div className="pt-16 flex justify-center">
-        <div className="p-2 w-full max-w-3xl border-2 border-neutral-200 rounded-lg">
+        <div className="pt-16 flex justify-center md:px-16">
+        <div className="p-2 w-full max-w-full border-2 border-neutral-200 rounded-lg shadow-2xl">
           {dataFaq.map(({ question, response }, i) => (
             <Disclosure key={i} > 
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full h-[70px] justify-between mb-2 items-center rounded-lg bg-ciel px-4 py-2 text-left text-md font-medium text-white hover:bg-ciel focus:outline-none focus-visible:ring focus-visible:ring-purple-500/75">
+                  <Disclosure.Button className="flex w-full h-[90px] md:h-[70px] justify-between mb-2 items-center rounded-lg bg-ciel p-4 text-left text-md font-medium text-white hover:bg-ciel focus:outline-none focus-visible:ring focus-visible:ring-purple-500/75">
                     <span>{question}</span>
                     <ChevronUpIcon
-                      className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-white`}
+                      className={`${open ? 'rotate-180 transform' : ''} h-6 w-6 text-white shrink-0`}
                     />
                   </Disclosure.Button>
-                  <Disclosure.Panel className="p-4 leading-6 font-display tracking-wide text-md text-black">
+                  <Disclosure.Panel className="p-4 leading-6 font-display tracking-wide text-sm text-black">
                     {i == 2 ? (
                       <>
                         {response} <a className='text-ciel' href="https://docs.google.com/forms/d/1xwNc8N-Lb8lGoP-JNDg_u-yfRyrizFD7P5CPHqaQ9Ck/viewform?ts=65bb3617&edit_requested=true" target="_blank" rel="noopener noreferrer" >here.</a>
