@@ -6,7 +6,7 @@ import TranslationsProvider from '@components/utils/translationProvider';
 
 const i18nNamespaces = ['faq'];
 
-export const FaqPage = async ({ params: { locale } }) => {
+const FaqPage = async ({ params: { locale } }) => {
 
    const { t, resources } = await initTranslations(locale, i18nNamespaces);
 
