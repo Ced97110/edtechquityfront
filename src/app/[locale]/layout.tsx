@@ -7,10 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { i18nConfig } from '../../../i18nConfig';
 import { dir } from 'i18next';
 import { MainFoot } from '@components/components/layout/footer/mainfoot';
-import { ensureStartsWith } from '@components/utils/util';
-import NextBreadcrumb from '@components/components/breadcrumb';
-import { Breadcrumbs } from '@nextui-org/react';
-import BreadCrumbs from '@components/components/breadcrumb';
+
 
 
 
