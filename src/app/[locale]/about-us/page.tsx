@@ -44,7 +44,8 @@ export const metadata: Metadata = {
         <div className='p-8 mx-auto container' >
           <div className='flex-col flex items-center gap-3'>
             <h2 className='text-5xl lg:text-5xl text-ciel font-extrabold font-display text-center pb-6'>{t('about-title')}</h2>
-            <p className='first-letter:text-5xl first-letter:text-ciel first-letter:pr-1  max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'> 
+            <p className='first-letter:text-7xl first-letter:font-bold first-letter:text-ciel
+                first-letter:mr-3  first-letter:float-left  max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'> 
              {t('about-para-1')}
             </p>
             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'>
