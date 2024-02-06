@@ -29,7 +29,7 @@ const Faq = () => {
     
   ]
 
-  console.log(dataFaq)
+
 
 
   const itemClasses = {

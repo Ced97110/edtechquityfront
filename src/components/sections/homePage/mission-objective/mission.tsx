@@ -61,7 +61,7 @@ const MissionAndObjective = () => {
 
            <div className='grid grid-cols-3 min-h-[400px] gap-y-4 lg:gap-x-1 justify-items-center'>
               {missionDetails.map((item, index) => (
-                  <div key={index} className='group max-h-[300px] hover:max-h-[550px] max-w-[350px] shadow-2xl bg-white col-span-3 lg:col-span-1 rounded-lg transition-height-width duration-600 hover:shadow-2xl relative p-10'>
+                  <div key={index} className='group max-h-[300px] hover:max-h-[550px] hover:border-ciel hover:border-2 max-w-[350px] shadow-2xl bg-white col-span-3 lg:col-span-1 rounded-lg transition-height-width duration-600 hover:shadow-2xl relative p-10'>
                       {item.icon}
                       <h3 className="text-lg text-black font-semibold mb-2">{item.title}</h3>
                       <p className='text-black text-md mb-10 leading-6 font-display tracking-wide'>{item.intro}</p>
