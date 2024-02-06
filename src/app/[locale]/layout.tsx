@@ -8,6 +8,9 @@ import { i18nConfig } from '../../../i18nConfig';
 import { dir } from 'i18next';
 import { MainFoot } from '@components/components/layout/footer/mainfoot';
 import { ensureStartsWith } from '@components/utils/util';
+import NextBreadcrumb from '@components/components/breadcrumb';
+import { Breadcrumbs } from '@nextui-org/react';
+import BreadCrumbs from '@components/components/breadcrumb';
 
 
 
@@ -52,7 +55,7 @@ export default function MainPageLayout({
         <html lang={locale} dir={dir(locale)}className={`${raleway.variable} scroll-smooth font-antialiased font-smooth box-border w-full`}>
           <body className='m-0 w-full min-h-screen overflow-x-hidden font-display leading-5 mx-auto antialiased'>
               <div className='min-h-screen grid grid-cols-1 grid-rows-[1fr,auto]'>
-                <div className='flex flex-col min-h-screen'>
+                <div className='flex relative flex-col min-h-screen'>
                   <Header locale={locale}/>
                   <SocialMediaIcons/>
                   {children}

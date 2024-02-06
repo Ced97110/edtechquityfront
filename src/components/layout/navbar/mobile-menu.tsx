@@ -32,6 +32,10 @@ function MobileMenu ({active = ''}: MobileMenuProps) {
       url: '/about-us'
     },
     {
+      name: t('faq'),
+      url: '/faq',
+    },
+    {
       name: t('sponsorship'),
       url: '/sponsorship',
       sprite:'button'
@@ -89,12 +93,12 @@ function MobileMenu ({active = ''}: MobileMenuProps) {
             </Transition.Child>
             <Transition.Child
                 as={Fragment}
-                enter="transition-all ease-in-out duration-300"
-                enterFrom="translate-x-[100%]"
+                enter="transition-all ease-in-out duration-600"
+                enterFrom="opacity-1"
                 enterTo="translate-x-0"
-                leave="transition-all ease-in-out duration-200"
+                leave="transition-all ease-in-out duration-600"
                 leaveFrom="translate-x-0"
-                leaveTo="translate-x-[100%]"
+                leaveTo="opacity-100"
             >
              <Dialog.Panel className="fixed bottom-0 left-0 right-0 top-0 h-full w-full flex bg-ciel pb-6">
                <div className='p-4 w-full'>

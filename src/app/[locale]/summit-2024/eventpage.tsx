@@ -8,6 +8,7 @@ import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import Tab from './tab';
+import Faq from '../faq/accordionfaq';
 
 
 
@@ -60,7 +61,7 @@ export const EventFeature = () => {
 
           </section>
 
-          <section className='bg-fuch  py-[50px]'>
+          <section className='bg-fuch py-[50px]'>
               <div className='container mx-auto'>
                 
 
@@ -163,8 +164,7 @@ export const EventFeature = () => {
 
           </section>
 
-          
-
+         
           <section className='bg-pink-600 max-h-screen py-[100px] lg:px-36'>
               <div className='mb-4 lg:mb-14'>
                 <h2 className='text-2xl lg:text-4xl text-center font-bold font-display text-white'>

@@ -27,6 +27,10 @@ export default function FooterMenu() {
       url: '/about-us'
     },
     {
+      name: t('faq'),
+      url: '/faq',
+    },
+    {
       name: t('sponsorship'),
       url: '/sponsorship',
       sprite:'button'

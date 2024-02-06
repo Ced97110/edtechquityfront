@@ -10,6 +10,7 @@ import Link from 'next/link';
 import MobileMenu from './mobile-menu';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+import { NavbarMenuToggle } from '@nextui-org/react';
 
 
     
@@ -43,12 +44,15 @@ import Image from 'next/image';
       name: t('about-us'),
       url: '/about-us'
     },
-    {
+     {
+      name: t('faq'),
+      url: '/faq',
+    },
+     {
       name: t('sponsorship'),
       url: '/sponsorship',
       sprite:'button'
     },
-    
   ]
 
 
@@ -83,7 +87,7 @@ import Image from 'next/image';
 
   return (
 
-        <nav className={headerClasses}>
+        <nav  className={headerClasses}>
              <div className='relative w-full z-30 flex items-center justify-evenly'>
 
               <div className='flex w-full items-center justify-between'>
@@ -96,7 +100,7 @@ import Image from 'next/image';
                 </div>
 
                 <div className='block flex-none lg:hidden'>
-                  <MobileMenu  />
+                 <MobileMenu/>
                 </div>
                  
                
