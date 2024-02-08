@@ -52,7 +52,7 @@ const packages = [
 
               <div className="z-10 flex flex-col relative top-[65px]">
                   <h1 className="text-4xl lg:text-5xl text-white font-extrabold font-display text-center">{t('sponsor-title')}</h1>
-                  <p className="md:text-xl mb-6 font-bold text-white text-start mt-2">{t('sponsor-subtitle')}</p>
+                  <p className="md:text-xl mb-6 font-bold text-white text-center mt-2">{t('sponsor-subtitle')}</p>
               </div>
           </div>
        

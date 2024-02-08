@@ -19,6 +19,13 @@ export const EventFeature = () => {
    const { t } = useTranslation();
 
    
+   const paragraph = t('summit-intro-para-1')
+
+   const word = 'Inspirame'
+
+   const parts = paragraph.split(word);
+
+   const highlightedParagraph = `${parts[0]}<a href='https://inspirame.com' target="_blank" rel="noopener noreferrer"  class='text-jaune'>${word}</a>${parts[1]}`;
 
 
    
@@ -71,7 +78,7 @@ export const EventFeature = () => {
                           <h2 className='text-md text-jaune text-center font-normal font-display pt-4 pb-4'>{t('summit-subtitle-intro')}</h2>
                     
                           <div className='max-w-[700px]'>
-                              <p className='text-white md:text-lg pb-4 leading-6 font-display tracking-wide'>{t('summit-intro-para-1')}</p>
+                               <div className='text-white md:text-lg pb-4 leading-6 font-display tracking-wide' dangerouslySetInnerHTML={{ __html: highlightedParagraph }}></div>
                                <p className='text-white md:text-lg pb-4 leading-6 font-display tracking-wide'>{t('summit-intro-para-2')}</p>
                           </div>
                         </div>
@@ -94,7 +101,7 @@ export const EventFeature = () => {
                                   {t('summit-why-attend-title')}
                                 </h3>
                                 <p className='font-display text-md text-jaune pt-4 leading-6 tracking-wide'>{t('summit-why-attend-subtitle')}</p>
-                                <p className='text-md text-white pt-4 leading-6 font-display tracking-wide'>{t('summit-why-attend-para')}</p>
+                                <p className='text-white mt-4 font-normal md:text-lg pb-4 leading-6 tracking-wide'>{t('summit-why-attend-para')}</p>
                               </div>
                             </div>
                         </div>
@@ -126,27 +133,27 @@ export const EventFeature = () => {
             
                     
                     <div className="mb-6 rounded-lg grid grid-cols-1 gap-y-6">
-                      <h3 className="text-xl font-normal text-white mb-2 bg-pink-600 w-full p-2 rounded-md pl-2"> {t('summit-eligibility-target')}</h3>
-                      <p className="text-white mb-2 pl-2 leading-6 font-display tracking-wide">{t('summit-eligibility-target-para')}</p>
+                      <h3 className="text-xl font-normal text-white bg-pink-600 w-full p-2 rounded-md pl-2"> {t('summit-eligibility-target')}</h3>
+                      <p className='text-white p-3 font-normal md:text-lg  leading-6 tracking-wide'>{t('summit-eligibility-target-para')}</p>
                     </div>
 
                   
                     <div className="mb-6">
                       <h3 className="text-xl font-normal text-white mb-2 bg-pink-600 w-full p-2 rounded-md">{t('summit-eligibility-app-title')}</h3>
-                      <p className="text-white mb-2  pt-2 pl-2 leading-6 font-display tracking-wide">{t('summit-eligibility-app-para-1')}</p>
-                      <p className="text-white font-display pl-2">{t('summit-eligibility-app-para-2')}</p>
+                      <p className='text-white p-3  font-normal md:text-lg pb-4 leading-6 tracking-wide'>{t('summit-eligibility-app-para-1')}</p>
+                      <p className='text-white p-3  font-normal md:text-lg pb-4 leading-6 tracking-wide'>{t('summit-eligibility-app-para-2')}</p>
                     </div>
 
                     <div className="mb-6">
                       <h3 className="text-xl font-normal text-white mb-2 font-display bg-pink-600 w-full p-2 rounded-md">{t('summit-eligibility-support-title')}</h3>
-                      <p className="text-white mb-2  pt-2 pl-2 leading-6 font-display tracking-wide">{t('summit-eligibility-support-para-1')}</p>
-                      <p className="text-white  pl-2 leading-6 font-display tracking-wide">{t('summit-eligibility-support-para-2')}</p>
+                      <p className='text-white font-normal p-3  md:text-lg pb-4 leading-6 tracking-wide'>{t('summit-eligibility-support-para-1')}</p>
+                      <p className='text-white font-normal p-3  md:text-lg pb-4 leading-6 tracking-wide'>{t('summit-eligibility-support-para-2')}</p>
                     </div>
 
                     
                     <div>
                       <h3 className="text-xl font-normal text-white mb-2 font-display  bg-pink-600 w-full p-2 rounded-md pl-2">{t('summit-eligibility-commu-title')}</h3>
-                      <p className="text-white  pt-2 pl-2 leading-6 font-display tracking-wide">{t('summit-eligibility-commu-para-1')}</p>
+                      <p className='text-white font-normal md:text-lg p-3  leading-6 tracking-wide'>{t('summit-eligibility-commu-para-1')}</p>
                     </div>
 
                      <div className='mt-5 flex justify-center'>

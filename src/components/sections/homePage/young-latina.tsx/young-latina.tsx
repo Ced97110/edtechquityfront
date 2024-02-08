@@ -14,7 +14,17 @@ import { useTranslation } from "react-i18next";
 
 const YoungLatinaSection = () => {
 
-     const { t } = useTranslation();
+   const { t } = useTranslation();
+
+   const paragraph = t('Young-latina-para-1')
+
+   const word = 'Inspirame'
+
+   const parts = paragraph.split(word);
+
+   const highlightedParagraph = `${parts[0]}<a href='https://inspirame.com' target="_blank" rel="noopener noreferrer"  class='text-jaune'>${word}</a>${parts[1]}`;
+
+
 
 
   return (
@@ -41,8 +51,8 @@ const YoungLatinaSection = () => {
                     <p className="pl-2 text-white font-bold">Sacramento, CA</p>
                   </div>
                   <div className='mt-6'>
-                    <p className='text-white pb-4 font-normal leading-6 tracking-wide'>{t('Young-latina-para-1')}</p>
-                    <p className='text-white font-normal pb-4 leading-6 tracking-wide'>{t('Young-latina-para-2')}</p>
+                    <div className='font-normal md:text-lg pb-4 leading-6 tracking-wide' dangerouslySetInnerHTML={{ __html: highlightedParagraph }}></div>
+                    <p className='font-normal md:text-lg pb-4 leading-6 tracking-wide'>{t('Young-latina-para-2')}</p>
                   </div>
                   <div>
                     <button className='lg:mt-8 max-w-max font-medium rounded-full box px-4 py-2 mt-4 font-display inline-block border-jaune border-2 border-solid shadow-md hover:shadow-xl text-white transition duration-300'>

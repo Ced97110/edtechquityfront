@@ -13,6 +13,17 @@ import LanguageChanger from '@components/utils/LanguageChanger';
 
   const { t,i18n } = useTranslation();
 
+  const paragraph = t('intro-paragraph-1')
+
+  const word = 'Inspirame'
+
+  const parts = paragraph.split(word);
+
+  const highlightedParagraph = `${parts[0]}<a href='https://inspirame.com' target="_blank" rel="noopener noreferrer"  class='text-ciel'>${word}</a>${parts[1]}`;
+
+
+
+
   useEffect(() => {
     // Attempt to play the video whenever the component mounts or the language changes
     if (videoRef.current) {
@@ -56,7 +67,7 @@ import LanguageChanger from '@components/utils/LanguageChanger';
                 </div>
                 <div className='lg:col-span-2 col-span-3 mx-auto'>
                   <div className='max-w-[570px]'>
-                    <p className='font-normal md:text-lg pb-4 leading-6 tracking-wide'>{t('intro-paragraph-1')}</p>
+                    <div className='font-normal md:text-lg pb-4 leading-6 tracking-wide' dangerouslySetInnerHTML={{ __html: highlightedParagraph }}></div>
                     <p className='font-normal md:text-lg pb-4 leading-6 tracking-wide'>{t('intro-paragraph-2')}</p>
                   </div>
                 </div>
