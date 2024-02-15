@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 
 
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import Image from 'next/image';
 import FooterMenu from './footer-menu';
 import clsx from 'clsx';
@@ -16,9 +16,14 @@ interface footerProps {
   active?:string;
 }
 
-export default async function Footer({active}:footerProps) {
+export default function Footer({active}:footerProps) {
 
   const pathname = usePathname()
+
+
+  useEffect(() => {
+    
+  },[pathname])
 
 
 

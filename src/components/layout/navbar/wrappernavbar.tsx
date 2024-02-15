@@ -84,6 +84,12 @@ import Image from 'next/image';
   }, []);
 
 
+  useEffect(() => {
+    
+  },[pathname])
+
+
+
   return (
 
         <nav  className={headerClasses}>
