@@ -60,11 +60,8 @@ export const EventFeature = () => {
                         <p className="pl-2 font-bold">Sacramento, CA</p>
                       </div>
                      <div>
-                       <button
-                           onClick={() => window.open("https://docs.google.com/forms/d/1xwNc8N-Lb8lGoP-JNDg_u-yfRyrizFD7P5CPHqaQ9Ck/viewform?ts=65bb3617&edit_requested=true", "_blank")}
-                            className="mt-8 inline-block bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-full shadow-md font-semibold text-lg cursor-pointer  transition duration-300 font-display "
-                         >
-                           {t('button-join')}
+                       <button className="mt-8 inline-block bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-full shadow-md font-semibold text-lg cursor-pointer  transition duration-300 font-display ">
+                          <Link href='/application'>{t('button-join')}</Link> 
                         </button>
                      </div>
                   </div>
@@ -164,7 +161,9 @@ export const EventFeature = () => {
 
                      <div className='mt-5 flex justify-center'>
                        <Link href={href}> 
-                         <button>Apply</button>
+                         <button className='mt-8 inline-block bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-full shadow-md font-semibold text-lg cursor-pointer  transition duration-300 font-display'>
+                          {t('button-join')}
+                         </button>
                        </Link>
                     </div>
                 </div>  
