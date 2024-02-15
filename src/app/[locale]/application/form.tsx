@@ -167,7 +167,7 @@ if (isSubmittedSuccessfully) {
 
   return (
    <main className="min-h-screen p-8 py-[150px] bg-fuch">
-      <h2 className="text-3xl md:text-5xl text-white font-display font-extrabold mb-6 text-center">
+      <h2 className="text-3xl md:text-5xl text-white font-display font-extrabold mb-20 text-center">
         {t('application-title')} <span className="text-jaune">{t('application-title-2')}</span>
       </h2>
       <div className='max-w-2xl mx-auto'>
