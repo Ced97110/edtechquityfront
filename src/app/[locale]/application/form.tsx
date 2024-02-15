@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import { useEffect, useState } from "react";
 import { useForm, } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
+import Link from "next/link";
 
 
 
@@ -14,6 +14,7 @@ function ApplicationForm() {
 
   const [loading, setLoading] = useState(false); // Initial state set to false since loading starts when form is submitted
   const [error, setError] = useState(null);
+  const [isSubmittedSuccessfully, setIsSubmittedSuccessfully] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
 
   const { t } = useTranslation();
@@ -27,16 +28,16 @@ function ApplicationForm() {
     { label: t('label-city'), name: 'city', type: 'text', optional: true },
     { label: t('label-state'), name: 'state', type: 'text', optional: true },
     { label: t('label-postal-code'), name: 'postalCode', type: 'text', optional: true },
-    { label: t('label-age'), name: 'age', type: 'number' },
+    { label: t('label-age'), name: 'age', type: 'text' },
     { label: t('label-ethnicity'), name: 'ethnicity', type: 'text', optional: true },
     { label: t('label-esl'), name: 'eslLearner', type: 'checkbox', optional: true },
     { label: t('label-enrolled'), name: 'enrolledInSchool', type: 'checkbox', optional: true },
     { label: t('label-school'), name: 'school', type: 'text', optional: true },
     { label: t('label-grade'), name: 'grade', type: 'text', optional: true },
     { label: t('label-dropped'), name: 'droppedOut', type: 'checkbox', optional: true },
-    { label: t('label-why'), name: 'reasonForDroppingOut', type: 'text', optional: true },
-    { label: t('label-participation'), name: 'reasonForParticipation', type: 'textarea', optional: true },
+    { label: t('label-why'), name: 'reasonForDroppingOut', type: 'textarea', optional: true },
     { label: t('label-discovery'), name: 'discoveryMethod', type: 'text', optional: true },
+   
   ];
 
 
@@ -49,10 +50,14 @@ function ApplicationForm() {
 
 
    useEffect(() => {
-    if (formState.isSubmitSuccessful) {
-      reset({ something: "" })
+    if (isSubmitSuccessful) {
+      reset(); // Reset all fields to default values, assuming no initial values are needed.
+      setSelectedFile(null); // Reset file selection if you're handling file uploads.
     }
-  }, [formState, submittedData, reset])
+  }, [isSubmitSuccessful, reset]);
+
+
+
 
   const handleFileChange = (event) => {
     const { files } = event.target;
@@ -61,23 +66,54 @@ function ApplicationForm() {
     }
   };
 
-  const onSubmit = async (data) => {
-  setLoading(true);
-  setError(null);
 
-  try {
-    // Convert form data to JSON, omitting 'submissionFile' if it's not handled here
-    const jsonData = Object.fromEntries(Object.entries(data).filter(([key]) => key !== 'submissionFile'));
 
-    const currentDate = new Date().toISOString().split('T')[0]; 
+   const uploadFileToCloudinary = async (file) => {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append("upload_preset", "zno7ucqy");
+     formData.append("folder", "edtechapplication");
 
-    jsonData['date'] = currentDate;
+    const response = await fetch('https://api.cloudinary.com/v1_1/dqr6k0yey/auto/upload', {
+      method: 'POST',
+      body: formData,
+    });
 
-    console.log(jsonData)
-
-    if (selectedFile) {
-      // Handle file separately, e.g., by uploading it first and adding a reference to jsonData
+    if (!response.ok) {
+      throw new Error('Failed to upload file to Cloudinary');
     }
+
+    const data = await response.json();
+    if (data.error) {
+      console.error('Cloudinary error:', data.error.message);
+      throw new Error(`Cloudinary upload failed: ${data.error.message}`);
+    } else {
+      return data.secure_url;
+    }
+    
+  };
+
+
+
+
+  const onSubmit = async (data) => {
+    setLoading(true);
+    setError(null);
+
+   try {
+      let fileUrl = '';
+      if (selectedFile) {
+        fileUrl = await uploadFileToCloudinary(selectedFile);
+      }
+
+      const formData = {
+        ...data,
+        fileUrl, // Include the Cloudinary file URL in the form data
+        date: new Date().toISOString().split('T')[0],
+      };
+
+
+      console.log(formData)
 
     const response = await fetch(urlSheet, {
       method: "POST",
@@ -86,7 +122,7 @@ function ApplicationForm() {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`
       },
-      body: JSON.stringify(jsonData),
+      body: JSON.stringify(formData),
     });
 
     if (response.status === 404) {
@@ -95,7 +131,8 @@ function ApplicationForm() {
     }
 
     const result = await response.json();
-    console.log(result);
+
+    setIsSubmittedSuccessfully(true);
   } catch (err) {
     setError(err);
     console.error(err.message);
@@ -105,42 +142,96 @@ function ApplicationForm() {
 };
 
 
+
+if (isSubmittedSuccessfully) {
+    return (
+      <div className="min-h-screen p-8 py-[150px]  bg-fuch flex flex-col justify-center items-center">
+        <div className="max-w-3xl">
+          <h2 className="text-3xl md:text-5xl text-white text-center font-display font-extrabold">
+             {t('thank-you-page-title')}
+          </h2>
+          <p className="text-white mt-6 text-lg text-center">
+             {t('thank-you-page-para')}
+          </p>
+           <p className="text-white mt-6 text-lg text-center">{t('thank-you-page-last')}</p>
+           <div className="flex lg:hidden items-center justify-center mt-6">
+             <button className='bg-transparent border-jaune border-2 rounded-full px-4 py-2 text-white'>
+                <Link href='/'>{t('button-thank-you')}</Link>
+            </button>
+           </div>
+        </div> 
+      </div>
+    );
+  }
+
+
   return (
-    <main className="min-h-screen p-8 py-[150px] bg-fuch">
-      <h2 className="text-3xl md:text-5xl text-white font-display font-extrabold mb-6 text-center">{t('application-title')} <span className="text-jaune">{t('application-title-2')}</span></h2>
+   <main className="min-h-screen p-8 py-[150px] bg-fuch">
+      <h2 className="text-3xl md:text-5xl text-white font-display font-extrabold mb-6 text-center">
+        {t('application-title')} <span className="text-jaune">{t('application-title-2')}</span>
+      </h2>
       <div className='max-w-2xl mx-auto'>
         <form onSubmit={handleSubmit(onSubmit)} className="grid gap-6">
           {questions.map(({ label, name, type, optional }) => (
-            <div key={name}>
-              <label htmlFor={name} className="block mb-1 p-4 font-semibold text-white">{label}</label>
-              {type !== 'textarea' && type !== 'file' && type !== 'checkbox' ? (
-                <input
-                  type={type}
-                  {...register(name, { required: !optional })}
-                  className="w-full border-gray-300 shadow-sm rounded-md p-2"
+            <div key={name} className="flex flex-col mb-4">
+              <label htmlFor={name} className="mb-2 text-sm font-bold text-white">{label}</label>
+              {type === 'textarea' ? (
+                <textarea
+                  {...register(name, optional ? {} : { required: `${label} is required` })}
+                  id={name}
+                  className="w-full px-3 py-2 border rounded shadow appearance-none text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  rows={3}
                 />
               ) : type === 'checkbox' ? (
-                <input
-                  type="checkbox"
-                  {...register(name)}
-                  className="w-6 h-6 border-gray-300 shadow-sm rounded-md p-2"
-                />
+                <div className="flex items-center">
+                  <input
+                    {...register(name)}
+                    id={name}
+                    type="checkbox"
+                    className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
+                  />
+                  <label htmlFor={name} className="ml-2 block text-sm font-medium text-white"></label>
+                </div>
               ) : (
-                <textarea
-                  {...register(name, { required: !optional })}
-                  rows={4}
-                  className="w-full border-gray-300 shadow-sm rounded-md p-2 text-black"
-                ></textarea>
+                <input
+                  {...register(name, {
+                    required: !optional && `${label} is required`,
+                    pattern: name === 'postalCode' ? { value: /^\d{5}$/, message: "Postal code must be a number with no more than 5 digits" } : undefined,
+                    min: name === 'age' ? 0 : undefined,
+                  })}
+                  id={name}
+                  type={type}
+                  className="w-full px-3 py-2 mt-1 border rounded shadow appearance-none text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
               )}
-              {errors[name] && <span className="text-red-500">This field is required</span>}
+              {errors[name] && <p className="text-red-500">{errors[name].message as unknown as string}</p>}
+
             </div>
           ))}
-          <button type="submit"  onClick={() => reset()}  className="mt-8 inline-block bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-full shadow-md font-semibold text-lg cursor-pointer transition duration-300 font-display">
-           {t('submit-button')}
+
+          <div className="mb-4">
+            <label htmlFor="fileUpload" className="block mb-2 text-sm font-bold text-white">
+              {t('button-submit-file')}
+            </label>
+            <input
+              id="fileUpload"
+              type="file"
+              onChange={handleFileChange}
+              className="w-full text-sm text-gray-500"
+            />
+          </div>
+           <button type="submit" className={`px-4 py-2 font-semibold text-lg text-white bg-pink-600 rounded-full shadow-md hover:bg-pink-700 transition duration-300 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={loading}>
+            {loading ? (
+              <div className="flex items-center justify-center">
+                <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white mr-2"></div>
+                {t('loading')}
+              </div>
+            ) : (
+              t('submit-button')
+            )}
           </button>
         </form>
-        {loading && <p>Submitting your application...</p>}
-        {error && <p className="text-red-500">An error occurred: {error.message}</p>}
+        {error && <p className="text-red-500">{error}</p>}
       </div>
     </main>
   );
