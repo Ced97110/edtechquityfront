@@ -30,6 +30,7 @@
     "flowbite": "^2.2.1",
     "flowbite-react": "^0.7.2",
     "framer-motion": "^11.0.3",
+    "google-spreadsheet": "^4.1.1",
     "html-to-image": "^1.11.11",
     "i18next": "^23.8.2",
     "i18next-resources-to-backend": "^1.2.0",
@@ -47,6 +48,7 @@
     "react-type-animation": "^3.2.0",
     "react-visibility-sensor": "^5.1.1",
     "sharp": "^0.33.1",
+    "sheetdb-js": "^1.0.3",
     "styled-jsx": "^5.1.2",
     "zod": "^3.22.4"
   },

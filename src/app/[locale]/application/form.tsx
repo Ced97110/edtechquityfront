@@ -2,8 +2,8 @@
 
 import { t } from "i18next";
 import { Metadata } from "next";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useEffect, useState } from "react";
+import { useForm, } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 
@@ -41,9 +41,18 @@ function ApplicationForm() {
 
 
 
-  const urlSheet = 'https://sheet.best/api/sheets/fa587c42-ff3b-4b64-8383-ed470c603cb9';
+  const urlSheet = 'https://sheetdb.io/api/v1/3t2tiu9hmxhhd?sheet=Applicants';
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const token =  'fygmwbcvtpuxls4q8c6f7dfdbd8cfwoafeei30uq'
+
+  const { register, formState ,reset,handleSubmit, formState: { errors, isSubmitSuccessful } } = useForm();
+
+
+   useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({ something: "" })
+    }
+  }, [formState, submittedData, reset])
 
   const handleFileChange = (event) => {
     const { files } = event.target;
@@ -75,6 +84,7 @@ function ApplicationForm() {
        mode: "cors",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`
       },
       body: JSON.stringify(jsonData),
     });
@@ -125,7 +135,7 @@ function ApplicationForm() {
               {errors[name] && <span className="text-red-500">This field is required</span>}
             </div>
           ))}
-          <button type="submit" className="mt-8 inline-block bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-full shadow-md font-semibold text-lg cursor-pointer transition duration-300 font-display">
+          <button type="submit"  onClick={() => reset()}  className="mt-8 inline-block bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-full shadow-md font-semibold text-lg cursor-pointer transition duration-300 font-display">
            {t('submit-button')}
           </button>
         </form>
