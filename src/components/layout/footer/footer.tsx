@@ -32,7 +32,7 @@ export default async function Footer({active}:footerProps) {
 
   return (
     <div className={clsx({
-      'bg-ciel': pathname !== '/summit-2024' && pathname !== '/es/summit-2024' && pathname !== '/es/application'  ,
+      'bg-ciel': pathname !== '/summit-2024' && pathname !== '/es/summit-2024' && pathname !== '/es/application' && pathname !== '/application' ,
       'bg-fuch': pathname === '/summit-2024' || pathname === '/es/summit-2024' || pathname === '/es/application' ||  pathname === '/application',
      
      })}>
