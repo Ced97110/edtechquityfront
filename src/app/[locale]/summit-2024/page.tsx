@@ -5,6 +5,7 @@ import TranslationsProvider from '@components/utils/translationProvider';
 import initTranslations from '@components/app/i18n';
 import { EventFeature } from './eventpage';
 import { Metadata } from 'next';
+import { auth } from '@clerk/nextjs';
 
 const i18nNamespaces = ['summit-2024'];
 
@@ -16,8 +17,6 @@ export const metadata: Metadata = {
 
 
 async function EventPage({ params: { locale } }) {
-
-
 
 
   const { t, resources } = await initTranslations(locale, i18nNamespaces);

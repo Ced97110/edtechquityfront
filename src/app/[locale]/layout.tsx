@@ -7,8 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { i18nConfig } from '../../../i18nConfig';
 import { dir } from 'i18next';
 import { MainFoot } from '@components/components/layout/footer/mainfoot';
-
-
+import { ClerkProvider } from '@clerk/nextjs'
 
 
 const raleway = Raleway({
@@ -16,7 +15,7 @@ const raleway = Raleway({
    subsets: ['latin']
 });
 
-
+const clerkPubKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
 
 type MainPageLayoutProps = {
@@ -37,7 +36,7 @@ export const metadata = {
     index: true
   },
 };
-
+ 
 
 export function generateStaticParams() {
   return i18nConfig.locales.map(locale => ({ locale }));
@@ -48,7 +47,8 @@ export default function MainPageLayout({
 }: MainPageLayoutProps) {
   
   return (
-    
+      
+      
         <html lang={locale} dir={dir(locale)}className={`${raleway.variable} scroll-smooth font-antialiased font-smooth box-border w-full`}>
           <body className='m-0 w-full min-h-screen overflow-x-hidden font-display leading-5 mx-auto antialiased'>
               <div className='min-h-screen grid grid-cols-1 grid-rows-[1fr,auto]'>
@@ -61,6 +61,7 @@ export default function MainPageLayout({
               </div>
           </body>
         </html>
+      
       
   )
 }

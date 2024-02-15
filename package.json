@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.29.6",
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.16.0",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
+    "@hookform/resolvers": "^3.3.4",
     "@next/bundle-analyzer": "^14.1.0",
     "@next/font": "^14.0.4",
     "@nextui-org/react": "^2.2.9",
@@ -31,19 +33,22 @@
     "html-to-image": "^1.11.11",
     "i18next": "^23.8.2",
     "i18next-resources-to-backend": "^1.2.0",
-    "next": "14.0.4",
+    "next": "^14.1.0",
     "next-i18n-router": "^5.2.1",
+    "next-page-transitions": "^1.0.0-beta.2",
     "next-reveal": "^1.0.6",
     "qrcode.react": "^3.1.0",
     "react": "^18",
     "react-countup": "^6.5.0",
     "react-dom": "^18",
+    "react-hook-form": "^7.50.1",
     "react-i18next": "^14.0.1",
     "react-transition-group": "^4.4.5",
     "react-type-animation": "^3.2.0",
     "react-visibility-sensor": "^5.1.1",
     "sharp": "^0.33.1",
-    "styled-jsx": "^5.1.2"
+    "styled-jsx": "^5.1.2",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/d3": "^7.4.3",

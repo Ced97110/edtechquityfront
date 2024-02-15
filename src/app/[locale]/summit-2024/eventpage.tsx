@@ -9,7 +9,8 @@ import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import Tab from './tab';
 import Faq from '../faq/accordionfaq';
-
+import Link from 'next/link';
+import { auth } from '@clerk/nextjs';
 
 
 
@@ -17,6 +18,11 @@ export const EventFeature = () => {
 
 
    const { t } = useTranslation();
+
+    
+
+   let href = '/application' 
+  
 
    
    const paragraph = t('summit-intro-para-1')
@@ -157,13 +163,9 @@ export const EventFeature = () => {
                     </div>
 
                      <div className='mt-5 flex justify-center'>
-                        <button
-                           onClick={() => window.open("https://docs.google.com/forms/d/1xwNc8N-Lb8lGoP-JNDg_u-yfRyrizFD7P5CPHqaQ9Ck/viewform?ts=65bb3617&edit_requested=true", "_blank")}
-                            className="mt-8 inline-block bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-full shadow-md font-semibold text-lg cursor-pointer  transition duration-300 font-display "
-                         >
-                            {t('button-join')}
-                        </button>
-
+                       <Link href={href}> 
+                         <button>Apply</button>
+                       </Link>
                     </div>
                 </div>  
                  

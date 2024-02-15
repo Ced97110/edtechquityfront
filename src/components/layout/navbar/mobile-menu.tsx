@@ -8,7 +8,8 @@ import clsx from 'clsx';
 import LanguageChanger from '@components/utils/LanguageChanger';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-
+import { SignIn, SignInButton } from '@clerk/nextjs';
+import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 
 interface MobileMenuProps {
   active?: string;
@@ -130,7 +131,7 @@ function MobileMenu ({active = ''}: MobileMenuProps) {
                            {item.sprite === 'button' ? (
                       // Render a button or any other specific component for the "Sponsorship" link
                            <Link href={item.url}  onClick={closeMobileMenu}>
-                              <button className='rounded-full px-4 py-2 font-display border-jaune border-2 bg-transparent text-white hover:text-pink-white'>{item.name}</button>
+                              <button className='rounded-full px-4 py-2 font-display bg-jaune text-ciel hover:text-pink-white'>{item.name}</button>
                             </Link>
                           ) : (
                             // Render a regular link for other links
@@ -142,7 +143,7 @@ function MobileMenu ({active = ''}: MobileMenuProps) {
                       ))}
                     </ul>
                   ) : null}
-                    <div className='flex justify-center mt-8'>
+                    <div className='flex justify-between mt-8 w-full'>
                      <LanguageChanger/>
                     </div>
                   </div>

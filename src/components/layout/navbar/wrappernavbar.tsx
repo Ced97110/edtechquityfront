@@ -10,16 +10,15 @@ import Link from 'next/link';
 import MobileMenu from './mobile-menu';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
-import { NavbarMenuToggle } from '@nextui-org/react';
 
-
-    
  function WrapperNavbar(){ 
 
 
 
    const [scrollToTop, setScrollToTop] = useState(true);
    const scrollDirection = useScrollDirection('down');
+
+
 
    const router = useRouter();
   const pathname = usePathname()
@@ -61,9 +60,9 @@ import { NavbarMenuToggle } from '@nextui-org/react';
     const headerClasses = clsx(
     'fixed top-0 z-40 p-0 flex items-center text-white p-4 w-full h-[90px] transition-transform duration-500 ease-in-out bg-opacity-90 pointer-events-auto user-select-auto',
     {
-        'bg-transparent text-white': scrollToTop && (pathname === '/es/summit-2024' || pathname === '/es' || pathname === '/summit-2024' || pathname === '/sponsorship' || pathname === '/es/sponsorship'   ),
+        'bg-transparent text-white': scrollToTop && (pathname === '/es/summit-2024' || pathname === '/es' || pathname === '/summit-2024' || pathname === '/sponsorship' || pathname === '/es/sponsorship'|| pathname === '/es/application' || pathname === '/application' ),
         'bg-ciel text-white': scrollToTop && pathname !== '/',
-        'bg-fuch text-white' : !scrollToTop && pathname === '/es/summit-2024' || pathname === '/summit-2024',
+        'bg-fuch text-white' : !scrollToTop && (pathname === '/es/summit-2024' || pathname === '/summit-2024' ||  pathname === '/es/application' ||   pathname === '/application'),
         'bg-ciel': !scrollToTop,
         '-translate-y-[90px]': !scrollToTop && scrollDirection === 'down'
     }
@@ -133,7 +132,11 @@ import { NavbarMenuToggle } from '@nextui-org/react';
                 </div>
 
                 <div className='hidden items-center md:hidden lg:flex'>
-                   <LanguageChanger/>
+                 
+                
+                  <div className='ml-4'>
+                    <LanguageChanger/>
+                  </div> 
                 </div>
                 
                
