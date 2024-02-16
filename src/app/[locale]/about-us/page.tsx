@@ -5,6 +5,7 @@ import ResponsiveImage from '@components/components/sections/homePage/hero/respo
 import { EnvelopeIcon } from '@heroicons/react/24/solid'
 import React from 'react'
 import type { Metadata } from 'next'
+
  
 
 
@@ -58,9 +59,30 @@ export const metadata: Metadata = {
           </div>
         </div>
        </section>
-       <section className='py-[50px] min-h-screen'>
+      
+      <section className='min-h-screen bg-white w-screen py-[100px] px-[20px]'> 
+        <div className='container mx-auto shadow-2xl p-4 lg:p-8 border-[0.5px] border-ciel rounded-lg'>
+          <div className='lg:mb-8 p-3 lg:max-w-3xl mx-auto flex flex-col'>
+              <h2 className='text-center text-ciel font-normal text-3xl lg:text-5xl tracking-[0.7em] mb-10'>{t('memorial-thank-you')}</h2>
+              <p className='text-center lg:text-lg font-light'>{t('memorial-para')}</p>
+          </div>
+          <div className='grid grid-cols-2 lg:gap-5 -mt-4 '>
+            <div className='col-span-2 relative h-[450px] justify-evenly items-center flex'>
+              <ResponsiveImage src='/M.png' height={200} width={200} priority={true} alt='maria-mendrano' className='' />
+              <ResponsiveImage src='/mom.jpg' height={320} width={320} priority={true} alt='maria-mendrano' className='rounded-full shadow-2xl' />
+              <ResponsiveImage src='/M.png' height={200} width={200} priority={true} alt='maria-mendrano' className='' />
+            </div>
+            <div className='col-span-2 -mt-6 lg:mt-0'>
+              <p className='text-center text-ciel font-normal text-xl lg:text-4xl tracking-[0.7em] uppercase'>Maria Medrano</p>
+            </div>
+          </div>
+        </div>
+       </section>
+
+
+       <section className='py-[100px] min-h-screen'>
          <div className='mb-14'>
-           <h2 className='text-center text-3xl text-ciel font-bold font-display'> {t('about-team')}</h2>
+           <h2 className='text-center text-4xl text-ciel font-bold font-display'> {t('about-team')}</h2>
          </div>
          <div className='container mx-auto'>
            <div className='grid grid-cols-2 lg:h-[340px] gap-8'>
