@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useForm, } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
+import router, { useRouter } from "next/navigation";
 
 
 
@@ -18,6 +19,8 @@ function ApplicationForm() {
   const [selectedFile, setSelectedFile] = useState(null);
 
   const { t } = useTranslation();
+
+  const router = useRouter()
 
 
   const questions = [
@@ -51,8 +54,9 @@ function ApplicationForm() {
 
    useEffect(() => {
     if (isSubmitSuccessful) {
-      reset(); // Reset all fields to default values, assuming no initial values are needed.
-      setSelectedFile(null); // Reset file selection if you're handling file uploads.
+
+      reset(); 
+      setSelectedFile(null); 
     }
   }, [isSubmitSuccessful, reset]);
 
@@ -133,6 +137,9 @@ function ApplicationForm() {
     const result = await response.json();
 
     setIsSubmittedSuccessfully(true);
+
+     router.push('/thank-you');
+   
   } catch (err) {
     setError(err);
     console.error(err.message);
@@ -145,7 +152,7 @@ function ApplicationForm() {
 
 if (isSubmittedSuccessfully) {
     return (
-      <div className="min-h-screen p-8 py-[150px]  bg-fuch flex flex-col justify-center items-center">
+      <div className="min-h-screen p-8   bg-fuch flex flex-col justify-center items-center">
         <div className="max-w-3xl">
           <h2 className="text-3xl md:text-5xl text-white text-center font-display font-extrabold">
              {t('thank-you-page-title')}
