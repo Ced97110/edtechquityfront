@@ -9,6 +9,7 @@ import initTranslations from '../i18n';
 import TranslationsProvider from '@components/utils/translationProvider';
 import { cookies } from 'next/headers';
 import { Metadata } from 'next';
+import ResponsiveImage from '@components/components/sections/homePage/hero/responsive-image';
 
 
 

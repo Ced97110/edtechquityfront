@@ -59,7 +59,8 @@ export const metadata: Metadata = {
           </div>
         </div>
        </section>
-      
+
+      {/*}
       <section className='min-h-screen bg-white w-screen py-[100px] px-[20px]'> 
         <div className='container mx-auto shadow-2xl p-4 lg:p-8 border-[0.5px] border-ciel rounded-lg'>
           <div className='lg:mb-8 p-3 lg:max-w-3xl mx-auto flex flex-col'>
@@ -78,6 +79,7 @@ export const metadata: Metadata = {
           </div>
         </div>
        </section>
+  }*/}
 
 
        <section className='py-[100px] min-h-screen'>

@@ -43,7 +43,7 @@ const VideoHero = () => {
 
   return (
     <>
-       <div className="relative z-0 transition-transform duration-700 ease-in-out min-h-screen overflow-hidden "> 
+       <div className="relative left-0 right-0 transition-transform duration-700 ease-in-out min-h-screen overflow-hidden "> 
           
 
               <div className='relative w-full h-full'>

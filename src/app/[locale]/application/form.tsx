@@ -45,9 +45,8 @@ function ApplicationForm() {
 
 
 
-  const urlSheet = 'https://sheetdb.io/api/v1/3t2tiu9hmxhhd?sheet=Applicants';
-
-  const token =  'fygmwbcvtpuxls4q8c6f7dfdbd8cfwoafeei30uq'
+  const urlSheet = process.env.NEXT_URL_SHEETS
+  const token =  process.env.NEXT_TOKEN_SHEETDB
 
   const { register, formState ,reset,handleSubmit, formState: { errors, isSubmitSuccessful } } = useForm();
 

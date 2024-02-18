@@ -45,7 +45,7 @@ import LanguageChanger from '@components/utils/LanguageChanger';
   return (
    
        
-      <section className='px-5 bg-white pt-[50px]'>
+      <section className='px-5 bg-white pt-[50px] relative'>
 
       
         <div className='container mx-auto'>

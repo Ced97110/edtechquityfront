@@ -10,6 +10,7 @@ import { MainFoot } from '@components/components/layout/footer/mainfoot';
 import { ClerkProvider } from '@clerk/nextjs'
 
 
+
 const raleway = Raleway({
   variable: "--display-font",
    subsets: ['latin']
@@ -48,19 +49,20 @@ export default function MainPageLayout({
   
   return (
       
-      
-        <html lang={locale} dir={dir(locale)}className={`${raleway.variable} scroll-smooth font-antialiased font-smooth box-border w-full`}>
-          <body className='m-0 w-full min-h-screen overflow-x-hidden font-display leading-5 mx-auto antialiased'>
-              <div className='min-h-screen grid grid-cols-1 grid-rows-[1fr,auto]'>
-                <div className='flex relative flex-col min-h-screen'>
-                  <Header locale={locale}/>
-                  <SocialMediaIcons/>
-                  {children}
-                  <MainFoot locale={locale}  active='active'/>
+        <ClerkProvider>
+          <html lang={locale} dir={dir(locale)}className={`${raleway.variable} scroll-smooth font-antialiased font-smooth box-border w-full`}>
+            <body className='m-0 w-full min-h-screen overflow-x-hidden font-display leading-5 mx-auto antialiased'>
+                <div className='min-h-screen grid grid-cols-1 grid-rows-[1fr,auto]'>
+                  <div className='flex relative flex-col min-h-screen'>
+                    <Header locale={locale}/>
+                    <SocialMediaIcons/>
+                    {children}
+                    <MainFoot locale={locale}  active='active'/>
+                    </div>
                   </div>
-              </div>
-          </body>
-        </html>
+              </body>
+           </html>
+          </ClerkProvider>
       
       
   )
