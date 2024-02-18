@@ -33,7 +33,7 @@ async function HomePage({ params: { locale } }) {
       namespaces={i18nNamespaces}
       locale={locale}
       resources={resources}>
-        <main className='min-h-screen bg-neutral-100 w-full max-w-[2001px]'>
+        <main className='min-h-screen bg-neutral-100 w-full max-w-[2000px]'>
           <Hero/>
           <IntroEdTech value={value}/>
           <Sponsor colorText='text-ciel' title={t('title-sponsor')} />
