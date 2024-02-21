@@ -74,7 +74,7 @@ export const metadata: Metadata = {
 
       
       <section className='min-h-screen w-screen py-[100px] px-[20px]'> 
-        <div className='container mx-auto shadow-lg shadow-blue-500/50 p-4 lg:p-8 border-[0.5px]   bg-white rounded-xl'>
+        <div className='container mx-auto shadow-2xl shadow-ciel-500/100 p-4 lg:p-8 border-[0.5px] ring-[15px] ring-offset-2 ring-offset-neutral-300 bg-white rounded-xl'>
           <div className='lg:mb-8 p-3 lg:max-w-3xl mx-auto flex flex-col'>
               <h2 className='text-center text-ciel font-normal text-3xl lg:text-5xl tracking-[0.7em] mb-10'>{t('memorial-thank-you')}</h2>
               <p className='text-center lg:text-lg font-light'>{t('memorial-para')}</p>
