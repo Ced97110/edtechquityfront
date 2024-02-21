@@ -55,14 +55,26 @@ export const metadata: Metadata = {
             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'>
                {t('about-para-3')}
             </p>
+             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'>
+               {t('about-para-4')}
+            </p>
+             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'>
+               {t('about-para-5')}
+            </p>
+             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'>
+               {t('about-para-6')}
+            </p>
+             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'>
+               {t('about-para-7')}
+            </p>
 
           </div>
         </div>
        </section>
 
-      {/*}
-      <section className='min-h-screen bg-white w-screen py-[100px] px-[20px]'> 
-        <div className='container mx-auto shadow-2xl p-4 lg:p-8 border-[0.5px] border-ciel rounded-lg'>
+      
+      <section className='min-h-screen w-screen py-[100px] px-[20px]'> 
+        <div className='container mx-auto shadow-lg shadow-blue-500/50 p-4 lg:p-8 border-[0.5px]   bg-white rounded-xl'>
           <div className='lg:mb-8 p-3 lg:max-w-3xl mx-auto flex flex-col'>
               <h2 className='text-center text-ciel font-normal text-3xl lg:text-5xl tracking-[0.7em] mb-10'>{t('memorial-thank-you')}</h2>
               <p className='text-center lg:text-lg font-light'>{t('memorial-para')}</p>
@@ -74,12 +86,12 @@ export const metadata: Metadata = {
               <ResponsiveImage src='/M.png' height={200} width={200} priority={true} alt='maria-mendrano' className='' />
             </div>
             <div className='col-span-2 -mt-6 lg:mt-0'>
-              <p className='text-center text-ciel font-normal text-xl lg:text-4xl tracking-[0.7em] uppercase'>Maria Medrano</p>
+              <p className='text-center text-ciel font-normal text-xl lg:text-4xl tracking-[0.7em] uppercase'>Maria Elena Medrano</p>
             </div>
           </div>
         </div>
        </section>
-  }*/}
+  
 
 
        <section className='py-[100px] min-h-screen'>
