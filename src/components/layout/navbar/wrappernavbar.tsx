@@ -50,6 +50,10 @@ import Image from 'next/image';
      {
       name: t('sponsorship'),
       url: '/sponsorship',
+    },
+     {
+      name: t('donate'),
+      url:'https://www.paypal.com/donate/?hosted_button_id=5Q5WHKYGMPRW2',
       sprite:'button'
     },
   ]
@@ -122,7 +126,7 @@ import Image from 'next/image';
                         >
                           {sprite === 'button' ? (
                             // Render a button or any other specific component for the "Sponsorship" link
-                            <Link href={url}>
+                            <Link href={url} rel="noopener noreferrer">
                               <button className='border-jaune border-2 border-solid rounded-full px-4 py-2 text-white'>{name}</button>
                             </Link>
                           ) : (
