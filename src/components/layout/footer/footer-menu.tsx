@@ -33,15 +33,20 @@ export default function FooterMenu() {
     {
       name: t('sponsorship'),
       url: '/sponsorship',
+    },
+     {
+      name: t('donate'),
+      url: '/https://www.paypal.com/donate/?hosted_button_id=5Q5WHKYGMPRW2',
       sprite:'button'
     },
+    
     
   ]
 
 
   return (
-    <nav className="flex w-full justify-between">
-      <ul>
+    <nav className="flex w-full justify-between pl-4">
+      <ul >
         {navLinks.map((item,i) => {
           return <FooterMenuItem key={i} item={item} />;
         })}
