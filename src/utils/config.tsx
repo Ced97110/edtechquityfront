@@ -4,7 +4,7 @@ export const defaultRevealOptions  = {
 delay:  300,
 distance:  '30px',
 duration:  550,
-easing:  'cubic-bezier(0.645, 0.045, 0.355, 1)',
+easing:  'cubic-bezier(0.745, 0.025, 0.355, 1)',
 opacity:  0,
 origin:  'bottom',
 rotate: {
