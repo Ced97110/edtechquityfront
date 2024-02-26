@@ -46,25 +46,30 @@ export const metadata: Metadata = {
           <div className='flex-col flex items-center gap-3'>
             <h2 className='text-5xl lg:text-5xl text-ciel font-extrabold font-display text-center pb-6'>{t('about-title')}</h2>
             <p className='first-letter:text-7xl first-letter:font-medium first-letter:text-ciel
-                first-letter:mr-3  first-letter:float-left  max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'> 
+                first-letter:mr-3  first-letter:float-left  max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide py-4'> 
              {t('about-para-1')}
             </p>
-            <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'>
+            <ResponsiveImage src='https://res.cloudinary.com/dqr6k0yey/image/upload/v1708921451/aboutpage/photo-1.jpg' height={500} width={600} priority={true} alt='maria-mendrano as a child with her parents' className='rounded-lg shadow-2xl' />
+            <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide py-8'>
               {t('about-para-2')}
             </p>
-            <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'>
+            <ResponsiveImage src='https://res.cloudinary.com/dqr6k0yey/image/upload/v1708921451/aboutpage/photo-2.jpg' height={800} width={850} priority={true} alt='Maria Mendrano with her family' className='rounded-lg shadow-2xl' />
+            <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide py-8'>
                {t('about-para-3')}
             </p>
-             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'>
+            <ResponsiveImage src='https://res.cloudinary.com/dqr6k0yey/image/upload/v1708921451/aboutpage/photo-3.jpg' height={800} width={850} priority={false} alt='Maria Mendrano with her family' className='rounded-lg shadow-2xl' />
+             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide py-8'>
                {t('about-para-4')}
             </p>
-             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'>
+            <ResponsiveImage src='https://res.cloudinary.com/dqr6k0yey/image/upload/v1708921451/aboutpage/photo-4.jpg' height={800} width={850} priority={false} alt='Maria Mendrano with her family' className='rounded-lg shadow-2xl' />
+             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide pt-8'>
                {t('about-para-5')}
             </p>
-             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'>
+             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide py-8'>
                {t('about-para-6')}
             </p>
-             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide'>
+             <ResponsiveImage src='https://res.cloudinary.com/dqr6k0yey/image/upload/v1708921451/aboutpage/photo-5.jpg' height={850} width={850} priority={false} alt='Maria Mendrano with her family' className='rounded-lg shadow-2xl' />
+             <p className='max-w-[850px] lg:text-lg  leading-6 font-display tracking-wide pt-8'>
                {t('about-para-7')}
             </p>
 
@@ -73,7 +78,7 @@ export const metadata: Metadata = {
        </section>
 
       
-      <section className='min-h-screen w-screen py-[100px] px-[20px]'> 
+      <section className='min-h-screen w-screen pb-[50px] px-[20px]'> 
         <div className='container mx-auto shadow-2xl shadow-ciel-500/100 p-4 lg:p-8 border-[0.5px] ring-[10px] ring-offset-2 ring-offset-neutral-300 bg-white rounded-xl'>
           <div className='lg:mb-8 p-3 lg:max-w-3xl mx-auto flex flex-col'>
               <h2 className='text-center text-ciel font-normal text-3xl lg:text-5xl tracking-[0.7em] mb-10'>{t('memorial-thank-you')}</h2>
