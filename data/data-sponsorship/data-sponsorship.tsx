@@ -47,5 +47,10 @@ export const packages = [
       alt:'sacramento-sponsor',
       url:'https://www.cityofsacramento.gov/'
     },
+    {
+      src:'https://res.cloudinary.com/dqr6k0yey/image/upload/v1713326524/sacramento-2024/chavez-family.jpg',
+      alt:'sacramento-sponsor',
+      url:'https://www.chavezfamilyfoundation.org/'
+    },
     
   ]

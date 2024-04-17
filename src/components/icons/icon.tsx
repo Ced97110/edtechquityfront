@@ -1,7 +1,6 @@
 import React from 'react';
 import IconInstagram from './instagram';
 import IconLinkedin from './linkedin';
-import IconTwitter from './twitter';
 import IconTikTok from './tiktok';
 
 
@@ -11,8 +10,6 @@ const Icon = ({ name }:any) => {
       return <IconInstagram />;
     case 'Linkedin':
       return <IconLinkedin />;
-    case 'Twitter':
-      return <IconTwitter />;
     case 'TikTok':
       return <IconTikTok />;
   }

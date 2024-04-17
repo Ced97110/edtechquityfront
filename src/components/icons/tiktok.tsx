@@ -6,6 +6,7 @@ const IconTikTok:any = () => (
     height="48px" 
     viewBox="0 0 48 48" 
     version="1.1" 
+    fill="#2F7DD2"
     xmlns="http://www.w3.org/2000/svg" 
     className="w-5 h-5 align-middle"
 >
