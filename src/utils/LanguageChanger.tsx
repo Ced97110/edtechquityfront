@@ -39,13 +39,22 @@ export default function LanguageChanger() {
 
   return (
     <select
-          className="appearance-none bg-transparent border-2 border-jaune rounded-lg  py-2 px-4 text-white leading-tight focus:outline-none focus:bg-white focus:border-jaune hover:border-jaune transition-colors duration-200 ease-in-out cursor-pointer"
-           onChange={handleChange}
-          value={currentLocale}
-        >
-        <option className="text-sm text-white" value="en">English</option>
-        <option className="text-sm text-white" value="es">Español</option>
-     </select>
-
+      className="appearance-none bg-transparent border-2 border-jaune rounded-lg  py-2 px-4 text-white leading-tight focus:outline-none focus:bg-white focus:border-jaune hover:border-jaune transition-colors duration-200 ease-in-out cursor-pointer"
+      onChange={handleChange}
+      value={currentLocale}
+    >
+      <option className="text-sm text-white" value="en">
+        <span role="img" aria-label="USA Flag">
+          🇺🇸
+        </span>{' '}
+        En 
+      </option>
+      <option className="text-sm text-white" value="es">
+        <span role="img" aria-label="Mexican Flag">
+          🇲🇽
+        </span>{' '}
+        Es
+      </option>
+    </select>
   );
 }
