@@ -17,6 +17,7 @@
     "@hookform/resolvers": "^3.3.4",
     "@next/bundle-analyzer": "^14.1.0",
     "@next/font": "^14.0.4",
+    "@next/third-parties": "^14.2.3",
     "@nextui-org/react": "^2.2.9",
     "@prisma/client": "^5.8.1",
     "@tremor/react": "^3.14.0",
