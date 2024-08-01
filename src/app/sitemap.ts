@@ -1,8 +1,7 @@
 import { MetadataRoute } from 'next';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  
 
+export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: 'https://edtechquity.net',
@@ -11,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       alternates: {
         languages: {
-          en: 'https://edtechquity.net',
           es: 'https://edtechquity.net/es',
         },
       },
@@ -24,7 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           en: 'https://edtechquity.net',
-          es: 'https://edtechquity.net/es',
         },
       },
     },
@@ -35,7 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
       alternates: {
         languages: {
-          en: 'https://edtechquity.net/summit-2024',
           es: 'https://edtechquity.net/es/summit-2024',
         },
       },
@@ -48,7 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           en: 'https://edtechquity.net/summit-2024',
-          es: 'https://edtechquity.net/es/summit-2024',
         },
       },
     },
@@ -59,7 +54,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
       alternates: {
         languages: {
-          en: 'https://edtechquity.net/about-us',
           es: 'https://edtechquity.net/es/about-us',
         },
       },
@@ -72,7 +66,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           en: 'https://edtechquity.net/about-us',
-          es: 'https://edtechquity.net/es/about-us',
         },
       },
     },
@@ -83,7 +76,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
       alternates: {
         languages: {
-          en: 'https://edtechquity.net/faq',
           es: 'https://edtechquity.net/es/faq',
         },
       },
@@ -96,7 +88,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           en: 'https://edtechquity.net/faq',
-          es: 'https://edtechquity.net/es/faq',
         },
       },
     },
@@ -107,7 +98,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
       alternates: {
         languages: {
-          en: 'https://edtechquity.net/sponsorship',
           es: 'https://edtechquity.net/es/sponsorship',
         },
       },
@@ -120,7 +110,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           en: 'https://edtechquity.net/sponsorship',
-          es: 'https://edtechquity.net/es/sponsorship',
         },
       },
     },
