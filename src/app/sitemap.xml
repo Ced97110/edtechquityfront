@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -8,7 +9,6 @@
         <priority>1</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://edtechquity.net" />
         <xhtml:link rel="alternate" hreflang="es" href="https://edtechquity.net/es" />
-        <link rel="canonical" href="https://edtechquity.net" />
     </url>
     <url>
         <loc>https://edtechquity.net/summit-2024</loc>
@@ -17,7 +17,6 @@
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://edtechquity.net/summit-2024" />
         <xhtml:link rel="alternate" hreflang="es" href="https://edtechquity.net/es/summit-2024" />
-        <link rel="canonical" href="https://edtechquity.net/summit-2024" />
     </url>
     <url>
         <loc>https://edtechquity.net/about-us</loc>
@@ -26,7 +25,6 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://edtechquity.net/about-us" />
         <xhtml:link rel="alternate" hreflang="es" href="https://edtechquity.net/es/about-us" />
-        <link rel="canonical" href="https://edtechquity.net/about-us" />
     </url>
     <url>
         <loc>https://edtechquity.net/faq</loc>
@@ -35,7 +33,6 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://edtechquity.net/faq" />
         <xhtml:link rel="alternate" hreflang="es" href="https://edtechquity.net/es/faq" />
-        <link rel="canonical" href="https://edtechquity.net/faq" />
     </url>
     <url>
         <loc>https://edtechquity.net/sponsorship</loc>
@@ -44,6 +41,5 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://edtechquity.net/sponsorship" />
         <xhtml:link rel="alternate" hreflang="es" href="https://edtechquity.net/es/sponsorship" />
-        <link rel="canonical" href="https://edtechquity.net/sponsorship" />
     </url>
 </urlset>
