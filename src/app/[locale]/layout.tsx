@@ -26,15 +26,15 @@ type MainPageLayoutProps = {
 };
 
 
-export const metadata:Metadata = {
-  metadataBase: new URL(`https://edtechquity.net`),
+export const metadata: Metadata = {
+  metadataBase: new URL('https://edtechquity.net'),
   description: "Discover how EdTechQuity supports Inspirame, a 501(c)(3) nonprofit, in its mission to empower low-income students to achieve higher education. Together, we aim to increase the graduation rates of Latinas from community college within 2 years, providing the tools and motivation to break the cycles of poverty",
   generator: 'Next.js',
-  keywords: ['edtechquity', 'bridge the gap', 'poverty', 'inclusion', 'young latina', 'technology', 'scolarship', 'non-profit', 'san francisco', 'education', 'college'],
+  keywords: ['edtechquity', 'bridge the gap', 'poverty', 'inclusion', 'young latina', 'technology', 'scholarship', 'non-profit', 'san francisco', 'education', 'college'],
   referrer: 'origin-when-cross-origin',
   title: {
-    default:'Edtechquity',
-    template: `%s | Edtechquity`
+    default: 'Edtechquity',
+    template: '%s | Edtechquity'
   },
   robots: {
     follow: true,
@@ -42,8 +42,7 @@ export const metadata:Metadata = {
   },
   alternates: {
     canonical: '/',
-    
-}
+  }
 };
  
 
@@ -54,11 +53,21 @@ export function generateStaticParams() {
 export default function MainPageLayout({
   children,params:{locale},
 }: MainPageLayoutProps) {
+  const lang = locale === 'es' ? 'es' : 'en';
+  const hreflangTags = (
+    <>
+      <link rel="alternate" href="https://edtechquity.net/" hrefLang="en" />
+      <link rel="alternate" href="https://edtechquity.net/es" hrefLang="es" />
+    </>
+  );
   
   return (
       
      
-          <html lang={locale} dir={dir(locale)} className={`${raleway.variable} scroll-smooth font-antialiased font-smooth box-border w-full`}>
+          <html lang={lang} dir={dir(locale)} className={`${raleway.variable} scroll-smooth font-antialiased font-smooth box-border w-full`}>
+              <head>
+               {hreflangTags}
+               </head>
             <body className='m-0 w-full min-h-screen overflow-x-hidden font-display leading-5 mx-auto antialiased'>
             <GoogleAnalytics gaId="G-J55WZHFZ3C" />
                 <div className='min-h-screen grid grid-cols-1 grid-rows-[1fr,auto]'>
