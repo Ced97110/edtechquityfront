@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "backend/server.ts",
-    "i18nConfig.tsx"
+    "i18nConfig.ts"
   ],
   "exclude": [
     "node_modules"
