@@ -1,12 +1,12 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModifiedDate = new Date('2024-04-15').toISOString();
+  
 
   return [
     {
       url: 'https://edtechquity.net',
-      lastModified: lastModifiedDate,
+      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
       alternates: {
@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: 'https://edtechquity.net/summit-2024',
-      lastModified: lastModifiedDate,
+      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
       alternates: {
@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: 'https://edtechquity.net/about-us',
-      lastModified: lastModifiedDate,
+      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.5,
       alternates: {
@@ -42,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: 'https://edtechquity.net/faq',
-      lastModified: lastModifiedDate,
+      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.5,
       alternates: {
@@ -54,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: 'https://edtechquity.net/sponsorship',
-      lastModified: lastModifiedDate,
+      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.5,
       alternates: {

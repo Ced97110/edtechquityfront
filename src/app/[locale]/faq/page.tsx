@@ -8,10 +8,25 @@ import Layout from '../layout';
 
 const i18nNamespaces = ['faq'];
 
+
+
+
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://edtechquity.net'),
   title: 'FAQs - Young Lady Latina Empowerment Summit',
-  description: 'Find answers to frequently asked questions about the Young Lady Latina Empowerment Summit, including participation details, application process, event schedule, and how you can get involved or support the cause.'
-}
+  description: 'Find answers to frequently asked questions about the Young Lady Latina Empowerment Summit, including participation details, application process, event schedule, and how you can get involved or support the cause.',
+  alternates: {
+    canonical: '/faq',
+    languages: {
+      'en': '/faq',
+      'es': '/es/faq',
+    },
+  },
+  openGraph: {
+    images: '/og-image.png',
+  },
+};
 
 
 

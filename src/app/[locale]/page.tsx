@@ -9,17 +9,28 @@ import initTranslations from '../i18n';
 import TranslationsProvider from '@components/utils/translationProvider';
 import { cookies } from 'next/headers';
 import { Metadata } from 'next';
-import ResponsiveImage from '@components/components/sections/homePage/hero/responsive-image';
+
 
 
 
 const i18nNamespaces = ['Home'];
 
-export const metadata: Metadata = {
-  title:'EdTechQuity',
-  description: 'Discover how EdTechQuity supports Inspirame, a 501(c)(3) nonprofit, in its mission to empower low-income students to achieve higher education. Together, we aim to increase the graduation rates of Latinas from community college within 2 years, providing the tools and motivation to break the cycles of poverty.'
-}
 
+export const metadata: Metadata = {
+  metadataBase: new URL('https://edtechquity.net'),
+  title: 'EdTechQuity',
+  description: 'Discover how EdTechQuity supports Inspirame, a 501(c)(3) nonprofit, in its mission to empower low-income students to achieve higher education. Together, we aim to increase the graduation rates of Latinas from community college within 2 years, providing the tools and motivation to break the cycles of poverty.',
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en': '/',
+      'es': '/es',
+    },
+  },
+  openGraph: {
+    images: '/og-image.png',
+  },
+};
 
 
 async function HomePage({ params: { locale } }) {

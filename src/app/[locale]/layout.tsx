@@ -2,12 +2,9 @@ import { Raleway } from 'next/font/google'
 import '../globals.css'
 import SocialMediaIcons from '@components/components/side/social';
 import Header from '@components/components/layout/navbar/header';
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from '@vercel/analytics/react';
 import { i18nConfig } from '../../../i18nConfig';
 import { dir } from 'i18next';
 import { MainFoot } from '@components/components/layout/footer/mainfoot';
-import { ClerkProvider } from '@clerk/nextjs'
 import { Metadata } from 'next';
 import { GoogleAnalytics } from '@next/third-parties/google'
 
@@ -60,7 +57,7 @@ export default function MainPageLayout({
   
   return (
       
-        <ClerkProvider>
+     
           <html lang={locale} dir={dir(locale)}className={`${raleway.variable} scroll-smooth font-antialiased font-smooth box-border w-full`}>
             <body className='m-0 w-full min-h-screen overflow-x-hidden font-display leading-5 mx-auto antialiased'>
             <GoogleAnalytics gaId="G-J55WZHFZ3C" />
@@ -74,7 +71,7 @@ export default function MainPageLayout({
                   </div>
               </body>
            </html>
-          </ClerkProvider>
+        
       
       
   )
