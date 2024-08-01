@@ -17,7 +17,7 @@ const i18nNamespaces = ['Home'];
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://edtechquity.net/'),
+  metadataBase: new URL('https://edtechquity.net'),
   title: 'EdTechQuity',
   description: 'Discover how EdTechQuity supports Inspirame, a 501(c)(3) nonprofit, in its mission to empower low-income students to achieve higher education. Together, we aim to increase the graduation rates of Latinas from community college within 2 years, providing the tools and motivation to break the cycles of poverty.',
   alternates: {
