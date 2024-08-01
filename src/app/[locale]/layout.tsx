@@ -40,6 +40,13 @@ export const metadata: Metadata = {
     follow: true,
     index: true
   },
+  alternates: {
+    canonical: '/',
+    languages: {
+      en: '/',
+      es: '/es'
+    }
+  }
 };
  
 
@@ -50,11 +57,13 @@ export function generateStaticParams() {
 export default function MainPageLayout({
   children,params:{locale},
 }: MainPageLayoutProps) {
+
+  const lang = locale === 'es' ? 'es' : 'en';
   
   return (
       
      
-          <html lang={locale} dir={dir(locale)} className={`${raleway.variable} scroll-smooth font-antialiased font-smooth box-border w-full`}>
+          <html lang={lang} dir={dir(locale)} className={`${raleway.variable} scroll-smooth font-antialiased font-smooth box-border w-full`}>
             <body className='m-0 w-full min-h-screen overflow-x-hidden font-display leading-5 mx-auto antialiased'>
             <GoogleAnalytics gaId="G-J55WZHFZ3C" />
                 <div className='min-h-screen grid grid-cols-1 grid-rows-[1fr,auto]'>
