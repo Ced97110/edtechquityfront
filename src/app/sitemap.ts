@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://edtechquity.net',
       lastModified: lastModifiedDate,
       changeFrequency: 'weekly',
-      priority: 1.0,
+      priority: 1,
       alternates: {
         languages: {
           en: 'https://edtechquity.net',
