@@ -4,41 +4,46 @@
     <url>
         <loc>https://edtechquity.net</loc>
         <lastmod>2024-04-15</lastmod>
-         <changefreq>weekly</changefreq>
-         <priority>1</priority>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://edtechquity.net" />
         <xhtml:link rel="alternate" hreflang="es" href="https://edtechquity.net/es" />
+        <link rel="canonical" href="https://edtechquity.net" />
     </url>
     <url>
         <loc>https://edtechquity.net/summit-2024</loc>
         <lastmod>2024-04-15</lastmod>
-         <changefreq>weekly</changefreq>
-         <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://edtechquity.net/summit-2024" />
         <xhtml:link rel="alternate" hreflang="es" href="https://edtechquity.net/es/summit-2024" />
+        <link rel="canonical" href="https://edtechquity.net/summit-2024" />
     </url>
     <url>
         <loc>https://edtechquity.net/about-us</loc>
         <lastmod>2024-04-15</lastmod>
-         <changefreq>weekly</changefreq>
-         <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://edtechquity.net/about-us" />
         <xhtml:link rel="alternate" hreflang="es" href="https://edtechquity.net/es/about-us" />
+        <link rel="canonical" href="https://edtechquity.net/about-us" />
     </url>
     <url>
         <loc>https://edtechquity.net/faq</loc>
         <lastmod>2024-04-15</lastmod>
-         <changefreq>weekly</changefreq>
-         <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://edtechquity.net/faq" />
         <xhtml:link rel="alternate" hreflang="es" href="https://edtechquity.net/es/faq" />
+        <link rel="canonical" href="https://edtechquity.net/faq" />
     </url>
     <url>
         <loc>https://edtechquity.net/sponsorship</loc>
         <lastmod>2024-04-15</lastmod>
-         <changefreq>weekly</changefreq>
-         <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://edtechquity.net/sponsorship" />
         <xhtml:link rel="alternate" hreflang="es" href="https://edtechquity.net/es/sponsorship" />
+        <link rel="canonical" href="https://edtechquity.net/sponsorship" />
     </url>
 </urlset>

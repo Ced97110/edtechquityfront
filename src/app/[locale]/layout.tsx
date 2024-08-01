@@ -44,7 +44,8 @@ export const metadata:Metadata = {
     index: true
   },
   alternates: {
-    canonical: './',
+    canonical: '/',
+    
 }
 };
  

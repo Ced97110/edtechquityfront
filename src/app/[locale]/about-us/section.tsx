@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { RevealList } from  'next-reveal'
 import { RevealWrapper } from  'next-reveal'
 import { defaultRevealOptions } from '@components/utils/config'
+import CredlyBadge from '@components/components/credly/logo'
 
 export const SectionAboutUs = () => {
 
@@ -113,6 +114,9 @@ export const SectionAboutUs = () => {
                     <a className="email-link" href={`mailto:${emailMaria}`}>
                        <EnvelopeIcon className="h-5 w-5 text-ciel mb-2"/>
                      </a>
+                 </div>
+                 <div className="flex justify-center py-4">
+                  <CredlyBadge />
                  </div>
                </div>
               </div>
