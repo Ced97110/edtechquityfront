@@ -7,21 +7,27 @@ import initTranslations from '@components/app/i18n';
 
  
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://edtechquity.net'),
-  title: 'About-us',
-  description: 'EdTechQuity was founded with a unique vision in mind...',
-  alternates: {
-    canonical: '/about-us',
-    languages: {
-      'en': '/about-us',
-      'es': '/es/about-us',
+
+
+export async function generateMetadata({ params: { locale } }): Promise<Metadata> {
+  const baseUrl = 'https://edtechquity.net';
+  const canonicalUrl = locale === 'en' ? `${baseUrl}/about-us` : `${baseUrl}/${locale}/about-us`;
+
+  return {
+    title: 'About-us',
+    description: 'EdTechQuity was founded with a unique vision in mind...',
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: `${baseUrl}/about-us`,
+        es: `${baseUrl}/es/about-us`,
+      },
     },
-  },
-  openGraph: {
-    images: '/og-image.png',
-  },
-};
+    openGraph: {
+      images: '/og-image.png',
+    },
+  };
+}
 
 
 const i18nNamespaces = ['about-us'];

@@ -9,10 +9,28 @@ import ApplicationForm from './form';
 
 const i18nNamespaces = ['application-form'];
 
-export const metadata: Metadata = {
-  title: 'Application',
-   description: 'Apply now to participate in the Young Lady Latina Empowerment Summit on May 4, 2024, in the Sacramento Valley. This event is a unique opportunity for young Latina women aged 16-23 to engage in educational workshops, networking, and mentorship programs. Your participation will empower you to pursue your educational and career goals with the support of micro scholarships. Do not miss the chance to be part of a transformative experience that promises personal growth and community engagement.',
+
+
+export async function generateMetadata({ params: { locale } }): Promise<Metadata> {
+  const baseUrl = 'https://edtechquity.net';
+  const canonicalUrl = locale === 'en' ? `${baseUrl}/application` : `${baseUrl}/${locale}/application`;
+
+  return {
+    title: 'Application',
+    description: 'Apply now to participate in the Young Lady Latina Empowerment Summit on May 4, 2024, in the Sacramento Valley. This event is a unique opportunity for young Latina women aged 16-23 to engage in educational workshops, networking, and mentorship programs. Your participation will empower you to pursue your educational and career goals with the support of micro scholarships. Do not miss the chance to be part of a transformative experience that promises personal growth and community engagement.',
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: `${baseUrl}/application`,
+        es: `${baseUrl}/es/application`,
+      },
+    },
+    openGraph: {
+      images: '/og-image.png',
+    },
+  };
 }
+
 
 
 async function ApplicationPage({ params: { locale } }) {

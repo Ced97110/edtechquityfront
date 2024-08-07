@@ -11,22 +11,26 @@ const i18nNamespaces = ['faq'];
 
 
 
+export async function generateMetadata({ params: { locale } }): Promise<Metadata> {
+  const baseUrl = 'https://edtechquity.net';
+  const canonicalUrl = locale === 'en' ? `${baseUrl}/faq` : `${baseUrl}/${locale}/faq`;
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://edtechquity.net'),
-  title: 'FAQs - Young Lady Latina Empowerment Summit',
-  description: 'Find answers to frequently asked questions about the Young Lady Latina Empowerment Summit, including participation details, application process, event schedule, and how you can get involved or support the cause.',
-  alternates: {
-    canonical: '/faq',
-    languages: {
-      'en': '/faq',
-      'es': '/es/faq',
+  return {
+    title: 'FAQs - Young Lady Latina Empowerment Summit',
+    description: 'Find answers to frequently asked questions about the Young Lady Latina Empowerment Summit, including participation details, application process, event schedule, and how you can get involved or support the cause.',
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: `${baseUrl}/faq`,
+        es: `${baseUrl}/es/faq`,
+      },
     },
-  },
-  openGraph: {
-    images: '/og-image.png',
-  },
-};
+    openGraph: {
+      images: '/og-image.png',
+    },
+  };
+}
+
 
 
 
