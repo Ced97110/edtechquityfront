@@ -51,22 +51,22 @@ import LanguageChanger from '@components/utils/LanguageChanger';
         <div className='container mx-auto'>
 
             <div className='grid grid-cols-2 gap-x-10 '>
-                <div className='lg:col-span-2 col-span-3 pb-6 h-full'>
+                <div className='lg:col-span-2 col-span-3 pb-6'>
                      <video
                         key={i18n.language}
-                        src={i18n.language === 'en' ? '/Education.mp4' : '/test1.mp4'}
+                        src={i18n.language === 'en' ? '/t1.mp4' : '/test1.mp4'}
                         autoPlay={true}
                         loop
                         muted
                         playsInline={true}
                         controls={false}
                         ref={videoRef}
-                        style={{width:'100%',objectFit:'cover'}}
+                        style={{width:'100%',objectFit:'cover',height:'100%'}}
                         />
-                    <h2 className='text-2xl lg:text-4xl text-center font-bold text-neutral-500 font-display  pb-4'>{t('intro-subtitle')}</h2>
                 </div>
                 <div className='lg:col-span-2 col-span-3 mx-auto'>
                   <div className='max-w-[570px]'>
+                    <h2 className='text-2xl lg:text-4xl text-center font-bold text-neutral-500 font-display  pb-4'>{t('intro-subtitle')}</h2>
                     <div className='font-normal md:text-lg pb-4 leading-6 tracking-wide' dangerouslySetInnerHTML={{ __html: highlightedParagraph }}></div>
                     <p className='font-normal md:text-lg pb-4 leading-6 tracking-wide'>{t('intro-paragraph-2')}</p>
                   </div>
