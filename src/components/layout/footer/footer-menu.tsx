@@ -39,6 +39,11 @@ export default function FooterMenu() {
       url: 'https://www.paypal.com/donate/?hosted_button_id=5Q5WHKYGMPRW2',
       sprite:'button'
     },
+    {
+      name: t('contact'),
+      url:'mailto:maria.medrano@inspirame.com',
+      sprite:'button-contact'
+    },
     
     
   ]
@@ -46,7 +51,7 @@ export default function FooterMenu() {
 
   return (
     <nav className="flex w-full justify-between pl-4">
-      <ul >
+      <ul className="p-0 m-0 list-none items-center" >
         {navLinks.map((item,i) => {
           return <FooterMenuItem key={i} item={item} />;
         })}

@@ -9,6 +9,7 @@ import { Metadata } from 'next';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import HomePage from '@components/components/lenis-wrapper';
 import LenisWraper from '@components/components/lenis-wrapper';
+import { Footer } from '@components/components/layout/footer/foo';
 
 
 
@@ -77,7 +78,7 @@ export default function MainPageLayout({
                     <SocialMediaIcons/>
                     {children}
                     </LenisWraper>
-                    <MainFoot locale={locale}  active='active'/>
+                    <Footer />
                     </div>
                   </div>
               </body>

@@ -58,7 +58,7 @@ import Image from 'next/image';
     },
      {
       name: t('contact'),
-      url:'mailto:maria.medrano@inspirame.com',
+      url:'mailto:medranom@edtechquity.net,banuelsosd@edtechquity.net',
       sprite:'button-contact'
     },
   ]
@@ -130,7 +130,7 @@ import Image from 'next/image';
                         >
                           {sprite === 'button' ? (
                             <Link href={url} rel="noopener noreferrer">
-                              <button className='border-jaune border-2 border-solid rounded-full px-4 py-2 text-white'>{name}</button>
+                              <button className='border-jaune border-[1px] border-solid rounded-full px-4 py-2 text-white'>{name}</button>
                             </Link>
                           ) : sprite === 'button-contact' ? (
                             <Link href={url} passHref>

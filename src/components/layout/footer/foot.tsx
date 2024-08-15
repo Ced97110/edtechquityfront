@@ -1,14 +1,10 @@
 'use client'
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-
-
-export const FooterMenuItem = ({ item }: { item:any }) => {
+export const FooterMenuItem = ({ item }: { item: any }) => {
   const pathname = usePathname();
-
   const [active, setActive] = useState(pathname === item.url);
 
   useEffect(() => {
@@ -16,16 +12,20 @@ export const FooterMenuItem = ({ item }: { item:any }) => {
   }, [pathname, item.url]);
 
   return (
-    <li className='block p-1 text-lg underline-offset-4 hover:text-blue-900 hover:underline'>
-       {item.sprite === 'button' ? (
-          <Link href={item.url}>
-              <button className='rounded-full px-4 py-2 font-display  border-2 border-jaune text-white hover:text-white  shadow-md hover:shadow-xl font-semibold text-lg cursor-pointer  transition duration-300 '>{item.name}</button>
-            </Link>
-              ) : ( 
+    <li className='m-0 mr-2 relative underline-offset-4 text-inherit hover:underline'>
+      {item.sprite === 'button' ? (
+        <Link href={item.url} rel="noopener noreferrer">
+          <button className='border-jaune border-[1px] border-solid rounded-full px-4 py-2 text-white'>{item.name}</button>
+        </Link>
+      ) : item.sprite === 'button-contact' ? (
         <Link href={item.url} passHref>
-            <p className='p-2 text-white hover:underline md:inline-block md:text-sm'>{item.name}</p>
+          <button className='bg-jaune rounded-full px-4 py-2 text-white'>{item.name}</button>
+        </Link>
+      ) : (
+        <Link href={item.url} passHref>
+          <p className='p-2'>{item.name}</p>
         </Link>
       )}
-   </li>
+    </li>
   );
 };
