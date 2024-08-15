@@ -54,7 +54,7 @@ import LanguageChanger from '@components/utils/LanguageChanger';
                 <div className='lg:col-span-2 col-span-3 pb-6'>
                      <video
                         key={i18n.language}
-                        src={i18n.language === 'en' ? '/t1.mp4' : '/test1.mp4'}
+                        src={i18n.language === 'en' ? '/t1.mp4' : '/tspanish.mp4'}
                         autoPlay={true}
                         loop
                         muted
