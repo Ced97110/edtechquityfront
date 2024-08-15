@@ -47,6 +47,7 @@ async function HomePage({ params: { locale } }) {
       locale={locale}
       resources={resources}>
         <main className='min-h-screen bg-neutral-100 w-full max-w-[2000px]'>
+          <Hero/>
           <IntroEdTech value={value}/>
           <Sponsor colorText='text-ciel' title={t('title-sponsor')} />
           <ProblemStatement/>
