@@ -51,10 +51,15 @@ import Image from 'next/image';
       name: t('sponsorship'),
       url: '/sponsorship',
     },
-     {
+    {
       name: t('donate'),
       url:'https://www.paypal.com/donate/?hosted_button_id=5Q5WHKYGMPRW2',
       sprite:'button'
+    },
+     {
+      name: t('contact'),
+      url:'https://www.paypal.com/donate/?hosted_button_id=5Q5WHKYGMPRW2',
+      sprite:'button-contact'
     },
   ]
 
@@ -124,16 +129,19 @@ import Image from 'next/image';
                           style={{ transitionDelay: `${i * 100}ms` }}
                         >
                           {sprite === 'button' ? (
-                            // Render a button or any other specific component for the "Sponsorship" link
                             <Link href={url} rel="noopener noreferrer">
                               <button className='border-jaune border-2 border-solid rounded-full px-4 py-2 text-white'>{name}</button>
                             </Link>
+                          ) : sprite === 'button-contact' ? (
+                            <Link href={url} passHref>
+                              <button className='bg-jaune rounded-full px-4 py-2 text-white'>{name}</button>
+                            </Link>
                           ) : (
-                            // Render a regular link for other links
                             <Link href={url} passHref>
                               <p className='p-2'>{name}</p>
                             </Link>
                           )}
+                          
                         </li>
                       ))}
                     </ol>
