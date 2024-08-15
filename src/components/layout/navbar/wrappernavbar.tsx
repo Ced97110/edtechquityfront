@@ -58,7 +58,7 @@ import Image from 'next/image';
     },
      {
       name: t('contact'),
-      url:'https://www.paypal.com/donate/?hosted_button_id=5Q5WHKYGMPRW2',
+      url:'mailto:maria.medrano@inspirame.com',
       sprite:'button-contact'
     },
   ]
