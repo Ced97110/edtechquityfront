@@ -7,6 +7,10 @@ import { dir } from 'i18next';
 import { MainFoot } from '@components/components/layout/footer/mainfoot';
 import { Metadata } from 'next';
 import { GoogleAnalytics } from '@next/third-parties/google'
+import HomePage from '@components/components/lenis-wrapper';
+import LenisWraper from '@components/components/lenis-wrapper';
+
+
 
 
 
@@ -69,8 +73,10 @@ export default function MainPageLayout({
                 <div className='min-h-screen grid grid-cols-1 grid-rows-[1fr,auto]'>
                   <div className='flex relative flex-col min-h-screen'>
                     <Header locale={locale}/>
+                    <LenisWraper>
                     <SocialMediaIcons/>
                     {children}
+                    </LenisWraper>
                     <MainFoot locale={locale}  active='active'/>
                     </div>
                   </div>

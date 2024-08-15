@@ -62,7 +62,7 @@ import Image from 'next/image';
 
     
     const headerClasses = clsx(
-    'fixed top-0 z-40 p-0 flex items-center text-white p-4 w-full h-[90px] transition-transform duration-500 ease-in-out bg-opacity-90 pointer-events-auto user-select-auto',
+    'fixed top-0 z-40 p-0 flex bg-ciel items-center text-white p-4 w-full h-[90px] transition-transform duration-500 ease-in-out bg-opacity-90 pointer-events-auto user-select-auto',
     {
         'bg-transparent text-white': scrollToTop && (pathname === '/es/summit-2024' || pathname === '/es' || pathname === '/summit-2024' || pathname === '/sponsorship' || pathname === '/es/sponsorship'|| pathname === '/es/application' || pathname === '/application' || pathname === '/es/thank-you' || pathname === '/thank-you' ),
         'bg-ciel text-white': scrollToTop && pathname !== '/',

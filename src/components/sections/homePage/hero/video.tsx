@@ -48,7 +48,7 @@ const VideoHero = () => {
 
               <div className='relative w-full h-full'>
                 <video
-                    src='https://res.cloudinary.com/dqr6k0yey/video/upload/f_auto:video,q_auto/montage-edtechquity'
+                    src='https://res.cloudinary.com/dqr6k0yey/video/upload/f_auto:video,q_auto/optimized-montage'
                     autoPlay={true}
                     loop
                     muted

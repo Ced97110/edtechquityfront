@@ -43,16 +43,16 @@ export default function LanguageChanger() {
       onChange={handleChange}
       value={currentLocale}
     >
-      <option className="text-sm text-white" value="en">
-        <span role="img" aria-label="USA Flag">
+      <option className="text-sm text-white" value="en" aria-label="USA Flag">
+        <>
           🇺🇸
-        </span>{' '}
+        </>
         En 
       </option>
-      <option className="text-sm text-white" value="es">
-        <span role="img" aria-label="Mexican Flag">
+      <option className="text-sm text-white" value="es" aria-label="Mexican Flag">
+        <>
           🇲🇽
-        </span>{' '}
+        </>
         Es
       </option>
     </select>
