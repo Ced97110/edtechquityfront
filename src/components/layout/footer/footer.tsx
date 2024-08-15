@@ -44,8 +44,7 @@ export default function Footer({active}:footerProps) {
       <div className="mx-auto relative flex w-full max-w-7xl flex-col gap-6  px-6 py-12 text-sm dark:border-neutral-700 md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0">
         <div>
           <Link className="flex items-center text-black dark:text-white md:pt-1" href="/">
-            <Image src='/logo.png' className='aspect-square' width={55} height={55} alt='logo' />
-            <span className="text-3xl font-extrabold  text-white " >EdTechQuity</span>
+            <Image src='/edtech.png' className='object-cover' width={255} height={255} alt='logo' />
           </Link>
         </div>
         <Suspense

@@ -63,7 +63,7 @@ import LanguageChanger from '@components/utils/LanguageChanger';
                         ref={videoRef}
                         style={{width:'100%',objectFit:'cover'}}
                         />
-                    <h2 className='text-2xl lg:text-5xl text-center font-bold text-neutral-500 font-display  pb-4'>{t('intro-subtitle')}</h2>
+                    <h2 className='text-2xl lg:text-4xl text-center font-bold text-neutral-500 font-display  pb-4'>{t('intro-subtitle')}</h2>
                 </div>
                 <div className='lg:col-span-2 col-span-3 mx-auto'>
                   <div className='max-w-[570px]'>
