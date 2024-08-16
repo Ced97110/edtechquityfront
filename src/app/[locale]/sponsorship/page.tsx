@@ -2,6 +2,7 @@
 import React from 'react';
 import { Packages } from './packages';
 import type { Metadata } from 'next'
+import { Partner } from './partner';
 
 
 interface packages {

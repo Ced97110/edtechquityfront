@@ -3,6 +3,7 @@ import ResponsiveImage from '@components/components/sections/homePage/hero/respo
 import { CheckIcon } from '@heroicons/react/24/solid';
 import React from 'react'
 import Link from 'next/link';
+import { Partner } from './partner';
 
 
 export  const Packages = async ({locale}) => {
@@ -87,6 +88,9 @@ const packages = [
 
         </div>
       </section>
+      <>
+       <Partner locale={locale}/>
+      </>
 
       <section className='py-[50px] bg-white'>
 
