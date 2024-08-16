@@ -5,6 +5,7 @@ import {Accordion, AccordionItem} from "@nextui-org/react";
 import { useTranslation } from 'react-i18next';
 import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/16/solid';
+import Link from 'next/link';
 
 const Faq = () => {
 
@@ -72,7 +73,7 @@ const Faq = () => {
                   <Disclosure.Panel className="p-4 leading-6 font-display tracking-wide text-sm text-black">
                     {i == 2 ? (
                       <>
-                        {response} <a className='text-ciel' href="https://docs.google.com/forms/d/1xwNc8N-Lb8lGoP-JNDg_u-yfRyrizFD7P5CPHqaQ9Ck/viewform?ts=65bb3617&edit_requested=true" target="_blank" rel="noopener noreferrer" >{t('faq-link')}. </a> {t('faq-r-2-span')}
+                        {response} <Link className='text-ciel' href="/application">{t('faq-link')}. </Link> {t('faq-r-2-span')}
                       </>
                     ) : response}
                   </Disclosure.Panel>

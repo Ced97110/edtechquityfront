@@ -66,6 +66,7 @@ import LanguageChanger from '@components/utils/LanguageChanger';
                     <h2 className='text-2xl lg:text-4xl text-center font-bold text-neutral-500 font-display  pb-4'>{t('intro-subtitle')}</h2>
                     <div className='font-normal md:text-lg pb-4 leading-6 tracking-wide' dangerouslySetInnerHTML={{ __html: paragraph }}></div>
                     <p className='font-normal md:text-lg pb-4 leading-6 tracking-wide'>{t('intro-paragraph-2')}</p>
+                    <p className='font-normal md:text-lg pb-4 leading-6 tracking-wide'>{t('intro-paragraph-2-2')}</p>
                   </div>
                 </div>
 

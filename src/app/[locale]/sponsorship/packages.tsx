@@ -2,7 +2,7 @@ import initTranslations from '@components/app/i18n';
 import ResponsiveImage from '@components/components/sections/homePage/hero/responsive-image'
 import { CheckIcon } from '@heroicons/react/24/solid';
 import React from 'react'
-
+import Link from 'next/link';
 
 
 export  const Packages = async ({locale}) => {
@@ -16,6 +16,7 @@ const packages = [
     passes: t('sponsor-card-1-passes'),
     promotions: [t('sponsor-card-1-promo-1'),t('sponsor-card-1-promo-2'),t('sponsor-card-1-promo-3')],
     bgColor: 'bg-pink-600',
+
   },
   {
     name: t('sponsor-card-2-name'),
@@ -120,9 +121,14 @@ const packages = [
                           <p className='text-lg font-bold pb-2'>
                            {t('sponsor-access')}
                           </p>
-                          <div className='flex'>
+                          <div className='flex flex-col'>
                            <CheckIcon className="h-4 w-4 text-green-500 mr-2" />
                            <p>{item.passes}</p>  
+                           <div className='mt-8'>
+                             <a href={`mailto:medranom@edtechquity.net, banuelosd@edtechquity.net`} className='bg-jaune rounded-full px-4 py-2 text-white'>
+                                Contact Us
+                              </a>
+                           </div>
                           </div>
                         </div>
                       </div>
