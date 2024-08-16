@@ -14,7 +14,7 @@ const i18nNamespaces = ['Home'];
 
 
 export async function generateMetadata({ params: { locale } }): Promise<Metadata> {
-  const baseUrl = 'https://edtechquity.net';
+  const baseUrl = 'https://www.edtechquity.net';
   const canonicalUrl = locale === 'en' ? `${baseUrl}` : `${baseUrl}/${locale}`;
 
   return {

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: ["/"],
       disallow: ["/search?q=", "/admin/"]
     },
-    sitemap: ["https://edtechquity.net/sitemap.xml"]
+    sitemap: ["https://www.edtechquity.net/sitemap.xml"]
   };
 }

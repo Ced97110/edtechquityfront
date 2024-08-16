@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://edtechquity.net';
+  const baseUrl = 'https://www.edtechquity.net';
   const locales = ['en', 'es'];
   const paths = ['/', 'about-us', 'application', 'faq', 'sponsorship', 'summit-2024'];
 
