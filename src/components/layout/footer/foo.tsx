@@ -106,9 +106,9 @@ const GenericColumn = ({
   
     <div className={`col-span-6 space-y-2 text-sm md:col-span-2 ${classname}`}>
       <span className="block text-zinc-50 font-bold">{title}</span>
-      {links.map((l) => (
+      {links.map((l,i) => (
               l.button === 'button' ? ( 
-                   <div className="flex ">
+                   <div key={l.title} className="flex ">
                       <a href='mailto:medranom@edtechquity.net, banuelosd@edtechquity.net' target="_blank" rel="noopener noreferrer" className="bg-jaune rounded-full px-4 py-2   flex items-center gap-1.5 text-white transition-colors hover:text-zinc-200 hover:underline">{l.title}</a>
                     </div> ) : (
               <Link
