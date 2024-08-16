@@ -40,7 +40,8 @@ function ApplicationForm() {
     { label: t('label-dropped'), name: 'droppedOut', type: 'checkbox', optional: true },
     { label: t('label-why'), name: 'reasonForDroppingOut', type: 'textarea', optional: true },
     { label: t('label-discovery'), name: 'discoveryMethod', type: 'text', optional: true },
-   
+    { label: t('label-attend'), name: 'WhyAttend', type: 'text',  },
+    { label: t('label-choosen'), name: 'whyChoosen', type: 'text', },
   ];
 
 
@@ -128,10 +129,10 @@ function ApplicationForm() {
       body: JSON.stringify(formData),
     });
 
-    if (response.status === 404) {
+   
       const errorResponse = await response.json(); // Assuming the response is in JSON format
       console.log("Error details:", errorResponse);
-    }
+   
 
     const result = await response.json();
 
@@ -141,7 +142,7 @@ function ApplicationForm() {
    
   } catch (err) {
     setError(err);
-    console.error(err.message);
+    console.error(err);
   } finally {
     setLoading(false);
   }
