@@ -58,7 +58,7 @@ import Image from 'next/image';
     },
      {
       name: t('contact'),
-      url:'mailto:medranom@edtechquity.net, banuelosd@edtechquity.net',
+      url:'mailto:medranom@edtechquity.net; banuelosd@edtechquity.net',
       sprite:'button-contact'
     },
   ]
