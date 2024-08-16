@@ -60,7 +60,7 @@ import { useTranslation } from 'react-i18next';
                     <div className='w-full pt-3'>
                         <div className='flex justify-center'>
                             <div className='h-full p-4  w-full  lg:max-w-[1050px] mt-14'>
-                                <h3 className='text-4xl lg:text-5xl font-display w-full font-extrabold text-white text-center'> <span className='underline decoration-wavy decoration-jaune decoration-2'>{t('problem-title-word')}</span><span className='ml-4'>{t('problem-title')}</span></h3>
+                                <h3 className='text-4xl lg:text-5xl font-display w-full font-extrabold text-white text-center'> <span className=''>{t('problem-title-word')}</span><span className='ml-4'>{t('problem-title')}</span></h3>
                                 <p className='text-white font-normal md:text-lg pb-4 leading-6 tracking-wide mt-6'>{t('problem-1-paragraph')} </p>
                                 <p className='text-white font-normal md:text-lg pb-4 leading-6 tracking-wide'>{t('problem-2-paragraph')} </p>
                               </div>
