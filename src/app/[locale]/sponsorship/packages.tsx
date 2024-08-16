@@ -106,12 +106,12 @@ const packages = [
               </div>
             </div>
 
-            <div className='grid grid-cols-2 gap-2 justify-items-center px-[215px]'>
+            <div className='grid grid-cols-2 gap-2 lg:[&>*:nth-child(even)]:justify-self-start   lg:[&>*:nth-child(odd)]:justify-self-end justify-items-center '>
 
               {packages && packages.map((item,index) =>  (
 
                 <div key={index} className={`col-span-2 lg:col-span-1 lg:row-span-1 rounded-lg `}>
-                  <div className={`p-5 w-[350px] h-[450px] lg:w-[500px] lg:h-[400px] rounded-lg ${item.bgColor}`}>
+                  <div className={`p-5 w-[350px] h-[550px] lg:w-[500px] lg:h-[450px] rounded-lg ${item.bgColor}`}>
                    <div className='flex-col text-white items-center'>
                     <h4 className='text-3xl text-white font-bold text-center pb-4'>{item.name}</h4>
                     <p className='text-4xl text-center pb-2'>{item.price}</p>
@@ -124,16 +124,12 @@ const packages = [
                           <div className='flex flex-col'>
                            <CheckIcon className="h-4 w-4 text-green-500 mr-2" />
                            <p>{item.passes}</p>  
-                           <div className='mt-8'>
-                             <a href={`mailto:medranom@edtechquity.net, banuelosd@edtechquity.net`} className='bg-jaune rounded-full px-4 py-2 text-white'>
-                                Contact Us
-                              </a>
-                           </div>
+                         
                           </div>
                         </div>
                       </div>
                       <div className='col-span-2 lg:col-span-1'>
-                        <div className='flex-col'>
+                        <div className='flex-col items-center'>
                           <p className='text-lg font-bold pb-2'>
                             {t('sponsor-visibility')}
                           </p>
@@ -147,14 +143,19 @@ const packages = [
                           </ul>
                         </div>
                       </div>
+                      <div className='col-span-2 mt-8 self-end flex items-end justify-center'>
+                        <div className=''>
+                          <a href={`mailto:medranom@edtechquity.net; banuelosd@edtechquity.net`} className='bg-jaune rounded-full px-4 py-2 text-white'>
+                               Contact Us
+                            </a>
+                           </div>
+                        </div>
                     </div>
                   </div>
                  </div>
                 </div>
               ))}
             </div>
-
-        
       </section>
     </>
   )
