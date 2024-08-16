@@ -51,7 +51,7 @@ import LanguageChanger from '@components/utils/LanguageChanger';
                 <div className='lg:col-span-2 col-span-3 pb-6'>
                      <video
                         key={i18n.language}
-                        src={i18n.language === 'en' ? 'https://res.cloudinary.com/dqr6k0yey/video/upload/f_auto:video,q_auto/v1/inspirame/edtechquity-video-english' : 'https://res.cloudinary.com/dqr6k0yey/video/upload/f_auto:video,q_auto/v1/inspirame/edtechquity-video-spanish'}
+                        src={i18n.language === 'en' ? 'https://res.cloudinary.com/dqr6k0yey/video/upload/f_auto:video,q_auto/v1/sacramento-2024/edtechquity-video-en' : 'https://res.cloudinary.com/dqr6k0yey/video/upload/f_auto:video,q_auto/v1/sacramento-2024/edtechquity-video-es'}
                         autoPlay={true}
                         loop
                         muted
