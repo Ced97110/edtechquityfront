@@ -4,10 +4,8 @@ import SocialMediaIcons from '@components/components/side/social';
 import Header from '@components/components/layout/navbar/header';
 import { i18nConfig } from '../../../i18nConfig';
 import { dir } from 'i18next';
-import { MainFoot } from '@components/components/layout/footer/mainfoot';
 import { Metadata } from 'next';
 import { GoogleAnalytics } from '@next/third-parties/google'
-import HomePage from '@components/components/lenis-wrapper';
 import LenisWraper from '@components/components/lenis-wrapper';
 import { Footer } from '@components/components/layout/footer/foo';
 
