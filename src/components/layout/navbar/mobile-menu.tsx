@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { SignIn, SignInButton } from '@clerk/nextjs';
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
+import NavLogo from '../logo';
 
 interface MobileMenuProps {
   active?: string;
@@ -108,11 +109,8 @@ function MobileMenu ({active = ''}: MobileMenuProps) {
              <Dialog.Panel className="fixed bottom-0 left-0 right-0 top-0 h-full w-full flex bg-ciel pb-6">
                <div className='p-4 w-full'>
                 <div className='flex justify-between items-center'>
-                   <div className='flex w-full md:w-[40px]'>
-                    <Link href='/' className="mr-2 flex w-full font-extrabold text-white items-center text-2xl font-display justify-start md:w-auto lg:mr-6">
-                      <Image src='/logo.png' priority={true} className='aspect-square' width={53} height={53} alt='logo' />
-                        EdTechQuity
-                      </Link>
+                   <div className='flex w-full md:w-[160px]'>
+                     <NavLogo height={150} width={150}  />
                     </div>
                    <button
                    className='flex h-11 w-11 items-center justify-center rounded-md border border-white text-white  transition-colors'

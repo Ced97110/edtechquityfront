@@ -10,6 +10,7 @@ import Link from 'next/link';
 import MobileMenu from './mobile-menu';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+import NavLogo from '../logo';
 
  function WrapperNavbar(){ 
 
@@ -107,9 +108,7 @@ import Image from 'next/image';
               <div className='flex w-full items-center justify-between'>
 
                 <div className='flex w-full md:w-[160px]'>
-                  <Link href='/' className="mr-2 flex w-full h-full font-extrabold text-inherit items-center text-2xl font-display justify-start md:w-auto lg:mr-6">
-                    <Image src='/edtech.png' priority={true}  className='object-cover' width={153} height={153} alt='logo' />
-                    </Link>
+                  <NavLogo height={150} width={150}  />
                 </div>
 
                 <div className='block flex-none lg:hidden'>
