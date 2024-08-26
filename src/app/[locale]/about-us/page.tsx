@@ -19,7 +19,7 @@ export async function generateMetadata({ params: { locale } }): Promise<Metadata
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        en: `${baseUrl}/about-us`,
+        en: `${baseUrl}/en/about-us`,
         es: `${baseUrl}/es/about-us`,
       },
     },
