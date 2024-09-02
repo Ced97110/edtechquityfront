@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         return acc;
       }, {});
 
-      // Add entries for each locale
+     
       locales.forEach(locale => {
         const localeUrl = `${baseUrl}/${locale}${path === '/' ? '' : `/${path}`}`;
         const localeAlternates = { ...alternates, [locale]: localeUrl };

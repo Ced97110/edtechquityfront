@@ -11,7 +11,7 @@ import initTranslations from '@components/app/i18n';
 
 export async function generateMetadata({ params: { locale } }): Promise<Metadata> {
   const baseUrl = 'https://www.edtechquity.net';
-  const canonicalUrl = locale === 'en' ? `${baseUrl}/about-us` : `${baseUrl}/${locale}/about-us`;
+  const canonicalUrl = locale === 'en' ? `${baseUrl}/en/about-us` : `${baseUrl}/${locale}/about-us`;
 
   return {
     title: 'About-us',

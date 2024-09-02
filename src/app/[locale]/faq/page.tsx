@@ -13,7 +13,7 @@ const i18nNamespaces = ['faq'];
 
 export async function generateMetadata({ params: { locale } }): Promise<Metadata> {
   const baseUrl = 'https://www.edtechquity.net';
-  const canonicalUrl = locale === 'en' ? `${baseUrl}/faq` : `${baseUrl}/${locale}/faq`;
+  const canonicalUrl = locale === 'en' ? `${baseUrl}/en/faq` : `${baseUrl}/${locale}/faq`;
 
   return {
     title: 'FAQs - Young Lady Latina Empowerment Summit',

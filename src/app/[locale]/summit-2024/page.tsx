@@ -12,7 +12,7 @@ const i18nNamespaces = ['summit-2024'];
 
 export async function generateMetadata({ params: { locale } }): Promise<Metadata> {
   const baseUrl = 'https://www.edtechquity.net';
-  const canonicalUrl = locale === 'en' ? `${baseUrl}/summit-2024` : `${baseUrl}/${locale}/summit-2024`;
+  const canonicalUrl = locale === 'en' ? `${baseUrl}/en/summit-2024` : `${baseUrl}/${locale}/summit-2024`;
 
   return {
     title: 'ETQ Summit-2024',

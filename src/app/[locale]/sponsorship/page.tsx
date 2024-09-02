@@ -26,7 +26,7 @@ const i18nNamespaces = ['sponsorship'];
 
 export async function generateMetadata({ params: { locale } }): Promise<Metadata> {
   const baseUrl = 'https://www.edtechquity.net';
-  const canonicalUrl = locale === 'en' ? `${baseUrl}/sponsorship` : `${baseUrl}/${locale}/sponsorship`;
+  const canonicalUrl = locale === 'en' ? `${baseUrl}/en/sponsorship` : `${baseUrl}/${locale}/sponsorship`;
 
   return {
     title: 'Sponsorship',
